@@ -1,0 +1,156 @@
+.work-archive-row {
+  overflow: hidden;
+  isolation: isolate;
+  cursor: pointer;
+  border-radius: 0;
+  transition: border-radius 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.work-archive-row:hover {
+  border-radius: 14px;
+}
+
+.work-archive-row-media {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  clip-path: inset(50% 0 50% 0);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), clip-path 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.work-archive-row:hover .work-archive-row-media {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+}
+
+.work-archive-year,
+.work-archive-tag {
+  color: var(--color-neutral-500);
+  transition: color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.work-archive-name {
+  color: #ffffff;
+  transition: color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.work-archive-row:hover .work-archive-year,
+.work-archive-row:hover .work-archive-tag {
+  color: var(--color-forest-700);
+}
+.work-archive-row:hover .work-archive-name {
+  color: var(--color-forest-950);
+}
+
+.work-archive-arrow {
+  color: var(--color-mint-300);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.work-archive-row:hover .work-archive-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--color-forest-950);
+}
+
+.work-hero-cta {
+  color: var(--color-forest-700);
+  background: transparent;
+  border-color: var(--color-forest-300);
+  transition: background 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.work-hero-cta--on-dark {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+.work-hero-cta--solid {
+  color: var(--color-forest-950);
+  background: #ffffff;
+  border-color: transparent;
+}
+.work-hero-cta:hover {
+  background: var(--color-forest-950);
+  color: #ffffff;
+  border-color: var(--color-forest-950);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-archive-row,
+  .work-archive-row-media,
+  .work-archive-year,
+  .work-archive-name,
+  .work-archive-tag,
+  .work-archive-arrow,
+  .work-hero-cta {
+    transition: none;
+  }
+}
+
+.work-recent-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 860px) {
+  .work-recent-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .work-recent-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.work-archive-row {
+  grid-template-columns: 70px 1fr auto auto;
+}
+@media (max-width: 560px) {
+  .work-archive-row {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+  }
+  .work-archive-tag {
+    white-space: normal;
+  }
+  .work-archive-arrow {
+    display: none;
+  }
+}
+
+.work-header-grid {
+  grid-template-columns: 1.2fr 1fr;
+}
+@media (max-width: 700px) {
+  .work-header-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.work-stack-card {
+  position: absolute;
+  left: 6vw;
+  right: 6vw;
+  height: clamp(440px, 58vh, 560px);
+  border-radius: 28px;
+  grid-template-columns: 1.1fr 1fr;
+}
+.work-stack-card-visual {
+  height: 100%;
+}
+@media (max-width: 700px) {
+  .work-stack-card {
+    position: static;
+    height: auto;
+    grid-template-columns: 1fr;
+    margin-bottom: 24px;
+  }
+  .work-stack-card-visual {
+    height: 160px;
+  }
+  /* The stack container's height is computed in JS from SELECTED.length so the
+     absolutely-positioned desktop cards have room to pin/scale as you scroll
+     past them. Once cards go back into normal flow above, the container just
+     needs to wrap them — this is the one spot in the codebase where the
+     inline style is a per-render JS value rather than a fixed number, so
+     overriding it here needs !important rather than moving it into a class. */
+  .work-stack-container {
+    height: auto !important;
+  }
+}

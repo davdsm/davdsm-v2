@@ -1,0 +1,94 @@
+@keyframes homeFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-22px); }
+}
+
+.craft-steps-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+.craft-step-offset {
+  margin-top: clamp(24px, 4vw, 70px);
+}
+@media (max-width: 860px) {
+  .craft-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .craft-step-offset {
+    margin-top: 0;
+  }
+}
+@media (max-width: 480px) {
+  .craft-steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.studio-header-grid {
+  grid-template-columns: 1.2fr 1fr;
+}
+@media (max-width: 700px) {
+  .studio-header-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- hero (mobile) ---------- */
+.hero-client-logo {
+  height: var(--logo-h);
+}
+.hero-cta-btn {
+  padding: 10px 10px 10px 30px;
+}
+.hero-cta-icon-badge {
+  width: 42px;
+  height: 42px;
+}
+@media (max-width: 700px) {
+  .hero-client-logo {
+    height: calc(var(--logo-h) * 0.7);
+  }
+  .hero-eyebrow-icon {
+    width: 11px;
+    height: 11px;
+  }
+  .hero-cta-btn {
+    padding: 6px 6px 6px 20px;
+  }
+  .hero-cta-icon-badge {
+    width: 34px;
+    height: 34px;
+  }
+  .hero-cta-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* ---------- selected work grid (mobile) ---------- */
+@media (max-width: 700px) {
+  .home-work-card-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+/* The map's stroke/dots/labels are sized in the SVG's own coordinate space, so
+   they scale down with the whole graphic depending on how much narrower the
+   container is than the 800-unit viewBox — bump them so the line, dots, and
+   place labels stay clearly visible instead of shrinking to near-invisible
+   hairlines/fine print. */
+[data-map-dot-label] {
+  font-size: 18px;
+}
+@media (max-width: 700px) {
+  [data-map-path] {
+    stroke-width: 5;
+  }
+  [data-map-dot-circle] {
+    r: 9;
+  }
+  [data-map-dot-label] {
+    font-size: 24px;
+  }
+}
