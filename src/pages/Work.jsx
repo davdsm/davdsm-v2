@@ -2,37 +2,36 @@ import { useEffect, useRef } from 'react'
 import ImageSlot from '../components/ImageSlot'
 import Fade from '../components/Fade'
 import Footer from '../components/Footer'
-import HomeWorkLeafyVisual from '../components/HomeWorkLeafyVisual'
 import { useLanguage } from '../i18n/LanguageContext'
 import { PROJECTS } from '../data/projects'
 import '../styles/work.css'
 
 const CUSTOM_CURSOR = true
 const MOTION_INTENSITY = 1
-const STACK_CARD_SLOT_VH = 90
-const STACK_PIN_TOP_PX = 130
-const STACK_PIN_DURATION = 0.55
 
-function getSelected(t) {
-  return ['amPrestige'].map((key) => ({
-    key,
-    name: t(`home.work.projects.${key}.name`),
-    tag: t(`home.work.projects.${key}.tag`),
-    year: t(`workPage.hero.stack.projects.${key}.year`),
-    description: t(`workPage.hero.stack.projects.${key}.description`),
-    cover: PROJECTS[key]?.cover,
-    hoverCover: PROJECTS[key]?.hoverCover,
-    href: PROJECTS[key] ? `#/work/${key}` : undefined,
-  }))
-}
+const FEATURED_KEY = 'forezguima'
+
+/* Petal positions/tints echo the page-transition petals — same shape language,
+   here drifting in place instead of falling. */
+const BLOOM_PETALS = [
+  { top: '10%', left: '4%', size: [18, 12], color: '#f6cfd9', dur: 11, delay: 0 },
+  { top: '24%', left: '46%', size: [13, 9], color: '#c3edd1', dur: 9, delay: 1.2 },
+  { top: '7%', left: '60%', size: [16, 11], color: 'rgba(255,255,255,0.9)', dur: 12, delay: 0.6 },
+  { top: '62%', left: '8%', size: [12, 8], color: '#98deb0', dur: 10, delay: 2 },
+  { top: '80%', left: '50%', size: [15, 10], color: '#f6cfd9', dur: 13, delay: 0.9 },
+  { top: '38%', left: '92%', size: [17, 11], color: '#c3edd1', dur: 10.5, delay: 1.6 },
+  { top: '86%', left: '88%', size: [12, 9], color: '#f6cfd9', dur: 9.5, delay: 2.4 },
+  { top: '16%', left: '80%', size: [14, 10], color: 'rgba(255,255,255,0.85)', dur: 11.5, delay: 0.3 },
+]
 
 function getRecent(t) {
-  return ['singula', 'highTide', 'raizRamo', 'portoNorte', 'musgo'].map((key) => ({
+  return ['amPrestige', 'agraWines', 'singula', 'highTide', 'raizRamo', 'portoNorte'].map((key) => ({
     key,
     name: t(`workPage.recent.projects.${key}.name`),
     tag: t(`workPage.recent.projects.${key}.tag`),
     year: t(`workPage.recent.projects.${key}.year`),
     cover: PROJECTS[key]?.cover,
+    hoverCover: PROJECTS[key]?.hoverCover,
     href: PROJECTS[key] ? `#/work/${key}` : undefined,
   }))
 }
@@ -48,7 +47,14 @@ function getArchive(t) {
 
 export default function Work() {
   const { t } = useLanguage()
-  const SELECTED = getSelected(t)
+  const FEATURED = {
+    name: t('workPage.featured.name'),
+    tag: t('workPage.featured.tag'),
+    year: t('workPage.featured.year'),
+    cover: PROJECTS[FEATURED_KEY]?.cover,
+    hoverCover: PROJECTS[FEATURED_KEY]?.hoverCover,
+    href: `#/work/${FEATURED_KEY}`,
+  }
   const RECENT = getRecent(t)
   const ARCHIVE = getArchive(t)
   const rootRef = useRef(null)
@@ -61,6 +67,7 @@ export default function Work() {
     const $$ = (s) => Array.from(root.querySelectorAll(s))
     const intensity = MOTION_INTENSITY
     const fine = window.matchMedia && window.matchMedia('(pointer: fine)').matches
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
     const cleanups = []
     const on = (target, ev, fn, opts) => {
@@ -159,7 +166,6 @@ export default function Work() {
 
     /* ---------- Parallax measurement ---------- */
     const plxEls = $$('[data-plx]')
-    const stackCards = $$('[data-stack-card]')
     const measure = () => {
       syncSpacerHeight()
       plxEls.forEach((el) => {
@@ -167,13 +173,6 @@ export default function Work() {
         el.style.transform = 'none'
         const r = el.getBoundingClientRect()
         el._plxBase = r.top + cur + r.height / 2
-        el.style.transform = prev
-      })
-      stackCards.forEach((el) => {
-        const prev = el.style.transform
-        el.style.transform = 'none'
-        const r = el.getBoundingClientRect()
-        el._stackDocTop = r.top + cur
         el.style.transform = prev
       })
     }
@@ -235,32 +234,12 @@ export default function Work() {
       if (maxCur) cur = Math.min(cur, maxCur)
       if (scrollContainer) scrollContainer.style.transform = `translate3d(0,${(-cur).toFixed(2)}px,0)`
       const vh = window.innerHeight
-      const isMobileViewport = window.innerWidth <= 700
-      plxEls.forEach((el) => {
-        if (el._plxBase == null) return
-        const sp = parseFloat(el.getAttribute('data-plx') || '0') * intensity
-        const y = (el._plxBase - cur - vh / 2) * -sp
-        el.style.transform = `translate3d(0,${y.toFixed(2)}px,0)`
-      })
-      if (isMobileViewport) {
-        stackCards.forEach((el) => { el.style.transform = 'none' })
-      } else if (stackCards.length && stackCards[0]._stackDocTop != null) {
-        const slot = vh * (STACK_CARD_SLOT_VH / 100)
-        const stackScrollable = Math.max(1, stackCards.length * slot - vh)
-        const overallProgress = Math.min(1, Math.max(0, (cur - stackCards[0]._stackDocTop) / stackScrollable))
-        stackCards.forEach((el, i) => {
-          if (el._stackDocTop == null) return
-          const pinStart = el._stackDocTop - STACK_PIN_TOP_PX
-          const pinEnd = pinStart + slot * STACK_PIN_DURATION
-          let extraY
-          if (cur <= pinStart) extraY = 0
-          else if (cur <= pinEnd) extraY = cur - pinStart
-          else extraY = pinEnd - pinStart
-          const rangeStart = i / stackCards.length
-          const targetScale = 1 - (stackCards.length - i) * 0.05
-          const localT = Math.min(1, Math.max(0, (overallProgress - rangeStart) / (1 - rangeStart)))
-          const scale = 1 - (1 - targetScale) * localT
-          el.style.transform = `translate3d(0,${extraY.toFixed(2)}px,0) scale(${scale.toFixed(4)})`
+      if (!reduceMotion) {
+        plxEls.forEach((el) => {
+          if (el._plxBase == null) return
+          const sp = parseFloat(el.getAttribute('data-plx') || '0') * intensity
+          const y = (el._plxBase - cur - vh / 2) * -sp
+          el.style.transform = `translate3d(0,${y.toFixed(2)}px,0)`
         })
       }
       updateNavTheme()
@@ -322,61 +301,60 @@ export default function Work() {
           </h1>
         </section>
 
-        <section id="selected" data-screen-label="Selected Work Stack" data-nav-theme="dark" style={{ position: 'relative', background: 'var(--color-forest-950)' }}>
-          <div data-card-stack="" className="work-stack-container" style={{ position: 'relative', height: `${SELECTED.length * STACK_CARD_SLOT_VH}vh` }}>
-            {SELECTED.map((item, i) => (
-              <div
-                key={item.key}
-                data-stack-card=""
-                className="work-stack-card"
+        <section id="featured" data-screen-label="Featured Project" data-nav-theme="light" className="work-bloom" style={{ position: 'relative', background: 'linear-gradient(150deg,#eafcf0 0%,#fdeef2 52%,#e9f3ff 100%)', overflow: 'hidden', padding: 'clamp(90px,12vw,170px) 6vw clamp(96px,13vw,180px)' }}>
+          <div aria-hidden="true" className="work-bloom-wash work-bloom-wash--pink" />
+          <div aria-hidden="true" className="work-bloom-wash work-bloom-wash--mint" />
+          <div aria-hidden="true">
+            {BLOOM_PETALS.map((petal, i) => (
+              <span
+                key={i}
+                className="work-bloom-petal"
                 style={{
-                  top: `${i * STACK_CARD_SLOT_VH}vh`,
-                  zIndex: i + 1,
-                  transformOrigin: 'top center',
-                  background: 'rgba(242,251,244,0.85)',
-                  backdropFilter: 'blur(18px) saturate(1.4)',
-                  WebkitBackdropFilter: 'blur(18px) saturate(1.4)',
-                  boxShadow: 'inset 1.5px 1.5px 1px 0 rgba(255,255,255,0.55), inset -1px -1px 1px 0 rgba(255,255,255,0.28), inset 0 0 12px rgba(255,255,255,0.12)',
-                  display: 'grid',
-                  gap: 'clamp(24px,4vw,56px)',
-                  padding: 'clamp(28px,3.4vw,48px)',
-                  alignItems: 'center',
+                  position: 'absolute',
+                  top: petal.top,
+                  left: petal.left,
+                  width: petal.size[0],
+                  height: petal.size[1],
+                  background: petal.color,
+                  borderRadius: '62% 38% 55% 45% / 60% 50% 50% 40%',
+                  animationDuration: `${petal.dur}s`,
+                  animationDelay: `${petal.delay}s`,
                 }}
-              >
-                <div>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', minWidth: 46, height: 46, padding: '0 6px', borderRadius: 9999, border: '1px solid var(--color-earth-400)', fontFamily: 'var(--font-mono)', fontSize: 14, color: 'var(--color-earth-500)', marginBottom: 'clamp(28px,4vw,52px)' }}>
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <div style={{ fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, letterSpacing: '0.06em', color: 'var(--color-forest-500)', marginBottom: 14 }}>
-                    <Fade>{item.year}</Fade> · <Fade>{item.tag}</Fade>
-                  </div>
-                  <h2 style={{ margin: '0 0 16px', fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(28px,3.2vw,42px)', letterSpacing: '-0.02em', color: 'var(--color-forest-900)' }}>
-                    <Fade>{item.name}</Fade>
-                  </h2>
-                  <p style={{ margin: '0 0 clamp(24px,3.6vw,40px)', maxWidth: 380, fontFamily: 'var(--font-sans)', fontSize: 15, lineHeight: 1.7, color: 'var(--color-neutral-600)' }}>
-                    <Fade>{item.description}</Fade>
-                  </p>
-                  <a href={item.href || '#recent'} data-cursor={t('common.view')} className="work-hero-cta" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, borderRadius: 9999, borderWidth: 1, borderStyle: 'solid', padding: '13px 22px', fontFamily: 'var(--font-sans)', fontSize: 14, fontWeight: 600 }}>
-                    <Fade>{t('workPage.hero.stack.cta')}</Fade>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 17L17 7" /><path d="M8 7h9v9" /></svg>
-                  </a>
-                </div>
-                <div className="work-stack-card-visual" style={{ position: 'relative', borderRadius: 20, overflow: 'hidden', background: 'linear-gradient(160deg,var(--color-forest-900),var(--color-forest-700))', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  {item.cover ? (
-                    <HomeWorkLeafyVisual
-                      style={{ width: '100%', height: '100%', borderRadius: 20 }}
-                      coverSrc={item.cover}
-                      coverAlt={item.name}
-                      revealSrc={item.hoverCover}
-                    />
-                  ) : (
-                    <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <path d="M12 21v-8" /><path d="M12 13c0-4-3-6.5-7.5-6.5 0 4.5 3 6.5 7.5 6.5z" /><path d="M12 13c0-4 3-6.5 7.5-6.5 0 4.5-3 6.5-7.5 6.5z" />
-                    </svg>
-                  )}
-                </div>
-              </div>
+              />
             ))}
+          </div>
+          <div className="work-bloom-grid">
+            <div>
+              <h2 style={{ margin: '0 0 clamp(20px,2.6vw,32px)' }}>
+                <span data-reveal="" style={{ display: 'block', fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(20px,2.3vw,32px)', letterSpacing: '-0.015em', color: 'var(--color-forest-500)', marginBottom: 'clamp(12px,1.6vw,20px)', opacity: 0, transform: 'translateY(24px)', transition: 'opacity 1.1s cubic-bezier(0.16,1,0.3,1), transform 1.1s cubic-bezier(0.16,1,0.3,1)' }}>
+                  <Fade>{t('workPage.featured.leadPre')}</Fade><em style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 300, color: 'var(--color-earth-500)' }}><Fade>{t('workPage.featured.leadEmphasis')}</Fade></em>
+                </span>
+                <span data-reveal="" style={{ display: 'block', fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(46px,7.6vw,118px)', lineHeight: 0.98, letterSpacing: '-0.03em', color: 'var(--color-forest-900)', textWrap: 'balance', opacity: 0, transform: 'translateY(36px)', transition: 'opacity 1.15s cubic-bezier(0.16,1,0.3,1) 0.1s, transform 1.15s cubic-bezier(0.16,1,0.3,1) 0.1s' }}>
+                  <Fade>{FEATURED.name}</Fade>
+                </span>
+              </h2>
+              <div data-reveal="" style={{ display: 'flex', alignItems: 'baseline', gap: 12, fontSize: 14, fontWeight: 600, letterSpacing: '0.06em', color: 'var(--color-forest-500)', marginBottom: 18, opacity: 0, transform: 'translateY(20px)', transition: 'opacity 1.1s cubic-bezier(0.16,1,0.3,1) 0.2s, transform 1.1s cubic-bezier(0.16,1,0.3,1) 0.2s' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontWeight: 500 }}>{FEATURED.year}</span>
+                <span style={{ fontFamily: 'var(--font-sans)' }}><Fade>{FEATURED.tag}</Fade></span>
+              </div>
+              <p data-reveal="" style={{ margin: '0 0 clamp(28px,3.6vw,44px)', maxWidth: '44ch', fontFamily: 'var(--font-sans)', fontSize: 16, lineHeight: 1.7, color: 'var(--color-neutral-600)', opacity: 0, transform: 'translateY(20px)', transition: 'opacity 1.1s cubic-bezier(0.16,1,0.3,1) 0.28s, transform 1.1s cubic-bezier(0.16,1,0.3,1) 0.28s' }}>
+                <Fade>{t('workPage.featured.description')}</Fade>
+              </p>
+              <a data-reveal="" href={FEATURED.href} data-cursor={t('common.view')} className="work-hero-cta" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, borderRadius: 9999, borderWidth: 1, borderStyle: 'solid', padding: '13px 22px', fontFamily: 'var(--font-sans)', fontSize: 14, fontWeight: 600, textDecoration: 'none', opacity: 0, transform: 'translateY(20px)', transition: 'opacity 1.1s cubic-bezier(0.16,1,0.3,1) 0.36s, transform 1.1s cubic-bezier(0.16,1,0.3,1) 0.36s' }}>
+                <Fade>{t('workPage.featured.cta')}</Fade>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 17L17 7" /><path d="M8 7h9v9" /></svg>
+              </a>
+            </div>
+            <div className="work-bloom-media">
+              <a href={FEATURED.href} data-cursor={t('common.view')} data-plx="0.05" className="work-bloom-blob work-bloom-blob--main" aria-label={FEATURED.name}>
+                <img src={FEATURED.cover} alt={t('workPage.featured.alt')} loading="lazy" decoding="async" />
+              </a>
+              {FEATURED.hoverCover && (
+                <div aria-hidden="true" className="work-bloom-blob work-bloom-blob--small">
+                  <img src={FEATURED.hoverCover} alt="" loading="lazy" decoding="async" />
+                </div>
+              )}
+            </div>
           </div>
         </section>
 
@@ -407,9 +385,14 @@ export default function Work() {
                   data-cursor={t('common.view')}
                   style={{ display: 'block', color: 'inherit', textDecoration: 'none', opacity: 0, transform: 'translateY(48px)', transition: `opacity 1.1s cubic-bezier(0.16,1,0.3,1) ${i * 0.1}s, transform 1.1s cubic-bezier(0.16,1,0.3,1) ${i * 0.1}s` }}
                 >
-                  <div className="grid-card-hover" style={{ overflow: 'hidden', borderRadius: 16, aspectRatio: '4/5', background: 'var(--color-mint-100)' }}>
+                  <div className="grid-card-hover work-card-media" style={{ position: 'relative', overflow: 'hidden', borderRadius: 16, aspectRatio: '4/5', background: 'var(--color-mint-100)' }}>
                     {item.cover ? (
-                      <img src={item.cover} alt={item.name} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      <>
+                        <img src={item.cover} alt={item.name} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        {item.hoverCover && (
+                          <img className="work-card-media__hover" src={item.hoverCover} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+                        )}
+                      </>
                     ) : (
                       <ImageSlot placeholder="Drop project image" />
                     )}

@@ -10,10 +10,10 @@ const CUSTOM_CURSOR = true
 const MOTION_INTENSITY = 1
 
 const HOME_WORK_GRID = [
-  { key: 'singula', slug: 'singula', gridColumn: '1/8', plx: '0.05', aspectRatio: '16/9' },
-  { key: 'amPrestige', slug: 'amPrestige', gridColumn: '9/13', plx: '-0.08', aspectRatio: '4/5', marginTop: 'clamp(60px,10vw,160px)', revealDelay: '0.12s' },
-  { key: 'highTide', slug: null, gridColumn: '2/6', plx: '0.07', aspectRatio: '4/5', marginTop: 'clamp(20px,4vw,60px)' },
-  { key: 'raizRamo', slug: null, gridColumn: '7/13', plx: '-0.05', aspectRatio: '16/10', marginTop: 'clamp(80px,12vw,180px)', revealDelay: '0.12s' },
+  { key: 'forezguima', slug: 'forezguima', gridColumn: '1/8', plx: '0.05', aspectRatio: '16/9' },
+  { key: 'agraWines', slug: 'agraWines', gridColumn: '9/13', plx: '-0.08', aspectRatio: '4/5', marginTop: 'clamp(60px,10vw,160px)', revealDelay: '0.12s' },
+  { key: 'amPrestige', slug: 'amPrestige', gridColumn: '2/6', plx: '0.07', aspectRatio: '4/5', marginTop: 'clamp(20px,4vw,60px)' },
+  { key: 'singula', slug: 'singula', gridColumn: '7/13', plx: '-0.05', aspectRatio: '16/10', marginTop: 'clamp(80px,12vw,180px)', revealDelay: '0.12s' },
 ]
 
 const CLIENT_LOGOS = [

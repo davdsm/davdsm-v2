@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react'
 import Fade from '../components/Fade'
 import Footer from '../components/Footer'
 import AmPrestigeCaseStudy from './AmPrestigeCaseStudy'
+import AgraWinesCaseStudy from './AgraWinesCaseStudy'
+import ForezguimaCaseStudy from './ForezguimaCaseStudy'
 import { useLanguage } from '../i18n/LanguageContext'
 import { PROJECTS } from '../data/projects'
 import '../styles/project.css'
@@ -13,7 +15,7 @@ export default function Project({ slug }) {
   const destroyedRef = useRef(false)
 
   useEffect(() => {
-    if (slug === 'amPrestige') return undefined
+    if (slug === 'amPrestige' || slug === 'agraWines' || slug === 'forezguima') return undefined
 
     destroyedRef.current = false
     const root = rootRef.current
@@ -87,6 +89,14 @@ export default function Project({ slug }) {
 
   if (slug === 'amPrestige') {
     return <AmPrestigeCaseStudy />
+  }
+
+  if (slug === 'agraWines') {
+    return <AgraWinesCaseStudy />
+  }
+
+  if (slug === 'forezguima') {
+    return <ForezguimaCaseStudy />
   }
 
   if (!project) {
