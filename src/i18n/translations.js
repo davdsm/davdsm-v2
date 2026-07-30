@@ -15,10 +15,10 @@ export const translations = {
     },
     home: {
       hero: {
-        eyebrow: 'Design & code studio, Portugal',
-        line1: 'Ideas',
-        line2: 'grown to',
-        emphasis: 'blossom.',
+        eyebrow: 'Design & code, grown in Portugal',
+        line1: 'We grow',
+        line2: 'digital',
+        emphasis: 'gardens.',
         cta: 'Know more',
         trustedBy: 'Trusted by',
         scroll: 'scroll',
@@ -884,10 +884,10 @@ export const translations = {
     },
     home: {
       hero: {
-        eyebrow: 'Estúdio de design & código, Portugal',
-        line1: 'Ideias',
-        line2: 'cultivadas até',
-        emphasis: 'florescer.',
+        eyebrow: 'Design & código, cultivados em Portugal',
+        line1: 'Crescemos',
+        line2: 'jardins',
+        emphasis: 'digitais.',
         cta: 'Saber mais',
         trustedBy: 'Confiam em nós',
         scroll: 'descer',
