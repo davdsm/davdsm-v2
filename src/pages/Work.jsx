@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react'
-import ImageSlot from '../components/ImageSlot'
 import Fade from '../components/Fade'
 import Footer from '../components/Footer'
 import { useLanguage } from '../i18n/LanguageContext'
 import { PROJECTS } from '../data/projects'
+import { ARCHIVE_PROJECTS } from '../data/archive'
 import '../styles/work.css'
 
 const CUSTOM_CURSOR = true
@@ -25,7 +25,7 @@ const BLOOM_PETALS = [
 ]
 
 function getRecent(t) {
-  return ['amPrestige', 'agraWines', 'singula', 'highTide', 'raizRamo', 'portoNorte'].map((key) => ({
+  return ['phfConcept', 'amPrestige', 'agraWines', 'singula', 'tramaArquitetos', 'imperoVictoria'].map((key) => ({
     key,
     name: t(`workPage.recent.projects.${key}.name`),
     tag: t(`workPage.recent.projects.${key}.tag`),
@@ -37,11 +37,12 @@ function getRecent(t) {
 }
 
 function getArchive(t) {
-  return ['vilaNova', 'sobreiro', 'terra', 'ponte', 'bosque'].map((key) => ({
-    key,
-    name: t(`workPage.archive.projects.${key}.name`),
-    tag: t(`workPage.archive.projects.${key}.tag`),
-    year: t(`workPage.archive.projects.${key}.year`),
+  return ARCHIVE_PROJECTS.map((item) => ({
+    key: item.key,
+    name: t(`workPage.archive.projects.${item.key}.name`),
+    tag: t(`workPage.archive.projects.${item.key}.tag`),
+    year: t(`workPage.archive.projects.${item.key}.year`) || item.year,
+    url: item.url,
   }))
 }
 
@@ -423,19 +424,28 @@ export default function Work() {
               <Fade>{t('workPage.archive.paragraph')}</Fade>
             </p>
           </div>
-          <div data-reveal="" style={{ maxWidth: 980, opacity: 0, transform: 'translateY(40px)', transition: 'opacity 1.1s cubic-bezier(0.16,1,0.3,1), transform 1.1s cubic-bezier(0.16,1,0.3,1)' }}>
+          <div data-reveal="" style={{ maxWidth: 1100, opacity: 0, transform: 'translateY(40px)', transition: 'opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1), transform 1.1s cubic-bezier(0.16, 1, 0.3, 1)' }}>
             <div style={{ borderTop: '1px solid rgba(255,255,255,0.12)' }} />
-            {ARCHIVE.map((item) => (
-              <div key={item.key} data-cursor={t('common.view')} className="work-archive-row" style={{ position: 'relative', display: 'grid', alignItems: 'baseline', gap: 20, padding: '24px 12px', borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
-                <div className="work-archive-row-media" aria-hidden="true">
-                  <ImageSlot placeholder="Drop project image" />
-                </div>
-                <span className="work-archive-year" style={{ fontFamily: 'var(--font-mono)', fontSize: 13 }}>{item.year}</span>
-                <span className="work-archive-name" style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(20px,2.4vw,30px)', letterSpacing: '-0.01em' }}><Fade>{item.name}</Fade></span>
-                <span className="work-archive-tag" style={{ fontFamily: 'var(--font-sans)', fontSize: 14, whiteSpace: 'nowrap' }}><Fade>{item.tag}</Fade></span>
-                <svg className="work-archive-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 17L17 7" /><path d="M8 7h9v9" /></svg>
-              </div>
-            ))}
+            {ARCHIVE.map((item) => {
+              const Tag = item.url ? 'a' : 'div'
+              const linkProps = item.url
+                ? { href: item.url, target: '_blank', rel: 'noopener noreferrer' }
+                : {}
+              return (
+                <Tag
+                  key={item.key}
+                  {...linkProps}
+                  data-cursor={t('common.view')}
+                  className="work-archive-row"
+                  style={{ position: 'relative', display: 'grid', alignItems: 'baseline', gap: 20, padding: '24px 12px', borderBottom: '1px solid rgba(255,255,255,0.12)', color: 'inherit', textDecoration: 'none' }}
+                >
+                  <span className="work-archive-year" style={{ fontFamily: 'var(--font-mono)', fontSize: 13 }}>{item.year}</span>
+                  <span className="work-archive-name" style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(20px,2.4vw,30px)', letterSpacing: '-0.01em' }}><Fade>{item.name}</Fade></span>
+                  <span className="work-archive-tag" style={{ fontFamily: 'var(--font-sans)', fontSize: 14, whiteSpace: 'nowrap' }}><Fade>{item.tag}</Fade></span>
+                  <svg className="work-archive-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 17L17 7" /><path d="M8 7h9v9" /></svg>
+                </Tag>
+              )
+            })}
           </div>
         </section>
         <Footer />

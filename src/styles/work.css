@@ -3,10 +3,11 @@
   isolation: isolate;
   cursor: pointer;
   border-radius: 0;
-  transition: border-radius 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: border-radius 0.5s cubic-bezier(0.16, 1, 0.3, 1), background 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .work-archive-row:hover {
   border-radius: 14px;
+  background: linear-gradient(135deg, #eafcf0 0%, #fdeef2 52%, #e9f3ff 100%);
 }
 
 .work-archive-row-media {

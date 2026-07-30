@@ -10,12 +10,15 @@ const MOTION_INTENSITY = 1
 
 function getGalleryItems(t) {
   return [
-    { src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop', alt: 'Studio space', caption: t('studioPage.gallery.items.atelier'), n: '01', wide: true },
-    { src: 'https://images.unsplash.com/photo-1512428813834-c702c7702b78?q=80&w=1000&auto=format&fit=crop', alt: 'Bonsai', caption: t('studioPage.gallery.items.bonsai'), n: '02', wide: false },
-    { src: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1200&auto=format&fit=crop', alt: 'Design work in progress', caption: t('studioPage.gallery.items.wip'), n: '03', wide: true },
-    { src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1000&auto=format&fit=crop', alt: 'Forest', caption: t('studioPage.gallery.items.walks'), n: '04', wide: false },
-    { src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop', alt: 'Team at work', caption: t('studioPage.gallery.items.sessions'), n: '05', wide: true },
-    { src: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=1000&auto=format&fit=crop', alt: 'Wildflowers', caption: t('studioPage.gallery.items.field'), n: '06', wide: false },
+    { src: '/assets/studio/season/01-shore.png', alt: 'Tropical shore from a porch', caption: t('studioPage.gallery.items.shore'), n: '01', wide: false },
+    { src: '/assets/studio/season/02-boats.png', alt: 'Longtail boats in a turquoise bay', caption: t('studioPage.gallery.items.boats'), n: '02', wide: false },
+    { src: '/assets/studio/season/03-horses.png', alt: 'Horses grazing by the forest', caption: t('studioPage.gallery.items.horses'), n: '03', wide: false },
+    { src: '/assets/studio/season/04-bay.png', alt: 'Cliff above a green bay', caption: t('studioPage.gallery.items.bay'), n: '04', wide: false },
+    { src: '/assets/studio/season/05-street.png', alt: 'Street corner with a tall cactus', caption: t('studioPage.gallery.items.street'), n: '05', wide: false },
+    { src: '/assets/studio/season/06-snow.png', alt: 'Snow village at blue hour', caption: t('studioPage.gallery.items.snow'), n: '06', wide: false },
+    { src: '/assets/studio/season/07-cliffs.png', alt: 'Coastal cliffs meeting the sea', caption: t('studioPage.gallery.items.cliffs'), n: '07', wide: false },
+    { src: '/assets/studio/season/08-cove.png', alt: 'Hidden cove with green water', caption: t('studioPage.gallery.items.cove'), n: '08', wide: false },
+    { src: '/assets/studio/season/09-canopy.png', alt: 'Looking up through the canopy', caption: t('studioPage.gallery.items.canopy'), n: '09', wide: false },
   ]
 }
 

@@ -1,0 +1,35 @@
+/**
+ * Earlier seasons / archive projects.
+ * Ordered newest → oldest. Excludes Featured / Freshly planted.
+ */
+export const ARCHIVE_PROJECTS = [
+  { key: 'walkys', url: 'https://walkys.com/', year: '2026' },
+  { key: 'elencoCompleto', url: 'https://www.elencocompleto.pt/', year: '2026' },
+  { key: 'cmvGest', url: 'https://cmvgest.com/', year: '2026' },
+  { key: 'house9', url: 'https://house9guimaraes.com/pt/', year: '2025' },
+  { key: 'passadicoCristalino', url: 'https://passadicocristalino.pt/', year: '2025' },
+  { key: 'newVintage', url: 'https://new-vintage.pt/', year: '2025' },
+  { key: 'portoCargo', url: 'https://portocargo.pt/', year: '2024' },
+  { key: 'rvpConstrucao', url: 'https://rvpconstrucao.pt/', year: '2024' },
+  { key: 'aquitex', url: 'https://aquitex.salazarconcept.com/', year: '2024' },
+  { key: 'anabelaPeixoto', url: 'https://anabelapeixoto.pt/', year: '2024' },
+  { key: 'antonioGarciaApicultura', url: 'https://antoniogarciaapicultura.pt/', year: '2024' },
+  { key: 'salazarConcept', url: 'https://salazarconcept.com/', year: '2023' },
+  { key: 'ngc', url: 'https://ngc.bio/', year: '2023' },
+  { key: 'casaVerde', url: 'https://acasaverde.pt/', year: '2023' },
+  { key: 'alexandrinaOliveira', url: 'https://alexandrinaoliveira.pt/', year: '2023' },
+  { key: 'pacoDAlem', url: 'https://tpalem.pt/', year: '2023' },
+  { key: 'jaCreativeDesign', url: 'https://jacreativedesign.pt/', year: '2022' },
+  { key: 'tocaDosAmigos', url: 'https://tocadosamigos.davdsm.pt/', year: '2022' },
+  { key: 'casamentosMariposa', url: 'https://casamentos.companhadamariposa.pt/', year: '2022' },
+  { key: 'geocachingMariposa', url: 'https://geocaching.companhadamariposa.pt/', year: '2021' },
+  { key: 'nerleiAmbiente', url: 'https://www.ambiente.nerlei.pt/', year: '2020' },
+  { key: 'galeriaFilomenaSoares', url: 'https://www.gfilomenasoares.com/', year: '2019' },
+  { key: 'boundy', url: 'https://boundy.pt/', year: '2018' },
+  { key: 'partoSemMedosTeste', url: 'https://teste.davdsm.pt/', year: '2018' },
+  { key: 'theHighJump', url: 'https://thehighjump.co/', year: '2018' },
+  { key: 'loonwerkerTon', url: 'https://loonwerkertonvanamerongen.nl/', year: '2018' },
+  { key: 'standDomAutomovel', url: 'https://standdomautomovel.com/', year: '2017' },
+  { key: 'partoSemMedos', url: 'https://partosemmedos.com/', year: '2016' },
+  { key: 'starDancers', url: 'https://stardancers.pt/', year: '2015' },
+]
