@@ -53,6 +53,7 @@ export default function ProjectInquiryCard() {
     submittingRef.current = true
     setStep(4)
     setError(null)
+    const submitLang = lang === 'pt' ? 'pt' : 'en'
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -61,7 +62,7 @@ export default function ProjectInquiryCard() {
           name: values.name.trim(),
           idea: values.idea.trim(),
           email: values.email.trim(),
-          lang,
+          lang: submitLang,
         }),
       })
       if (!res.ok) throw new Error('send failed')
