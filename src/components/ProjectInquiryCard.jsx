@@ -18,15 +18,15 @@ const LeafIcon = ({ size = 18 }) => (
 /**
  * Footer's "Your project" card. Idle shows the original static-looking prompt;
  * focusing it opens a quiet, one-field-at-a-time flow (name -> idea -> email)
- * that replaces itself in place, ending on a warm confirmation. Submission is
- * stubbed (fake latency + success) until a real endpoint is wired.
+ * that replaces itself in place, ending on a warm confirmation.
  */
 export default function ProjectInquiryCard() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   const [step, setStep] = useState(0) // 0 = idle, 1-3 = STEPS, 4 = submitting, 5 = success
   const [values, setValues] = useState({ name: '', idea: '', email: '' })
   const [error, setError] = useState(null)
   const inputRef = useRef(null)
+  const submittingRef = useRef(false)
 
   const STEPS = STEP_KEYS.map((key) => ({
     key,
@@ -48,6 +48,32 @@ export default function ProjectInquiryCard() {
 
   const activeField = step >= 1 && step <= 3 ? STEPS[step - 1] : null
 
+  const submit = async () => {
+    if (submittingRef.current) return
+    submittingRef.current = true
+    setStep(4)
+    setError(null)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: values.name.trim(),
+          idea: values.idea.trim(),
+          email: values.email.trim(),
+          lang,
+        }),
+      })
+      if (!res.ok) throw new Error('send failed')
+      setStep(5)
+    } catch {
+      setError(t('inquiry.errors.send'))
+      setStep(3)
+    } finally {
+      submittingRef.current = false
+    }
+  }
+
   const advance = () => {
     if (!activeField) return
     const msg = validate(activeField.key, values[activeField.key])
@@ -59,8 +85,7 @@ export default function ProjectInquiryCard() {
     if (step < 3) {
       setStep(step + 1)
     } else {
-      setStep(4)
-      setTimeout(() => setStep(5), 750)
+      submit()
     }
   }
 
