@@ -872,7 +872,7 @@ export const translations = {
   pt: {
     nav: {
       studio: 'Estúdio',
-      work: 'Trabalho',
+      work: 'Portfolio',
       solutions: 'Soluções',
     },
     common: {
@@ -880,7 +880,7 @@ export const translations = {
       drag: 'Arrastar',
       madeOfForest: 'Feito de floresta.',
       caseStudy: 'Estudo de caso',
-      backToWork: 'Voltar ao trabalho',
+      backToWork: 'Voltar ao portfolio',
       visitWebsite: 'Visitar website',
     },
     home: {
@@ -915,7 +915,7 @@ export const translations = {
         heading: 'Projetos',
         headingEmphasis: 'selecionados',
         range: '(2019 · 2026)',
-        seeAll: 'Ver todo o trabalho',
+        seeAll: 'Ver todo o portfolio',
         projects: {
           forezguima: { name: 'Forezguima', tag: 'website · catálogo' },
           phfConcept: { name: 'PHF Concept', tag: 'website · catálogo' },
@@ -1007,8 +1007,8 @@ export const translations = {
     },
     workPage: {
       hero: {
-        eyebrow: 'O trabalho',
-        line1: 'Trabalho cultivado',
+        eyebrow: 'O portfolio',
+        line1: 'Portfolio cultivado',
         line2Pre: 'estação após ',
         emphasis: 'estação.',
       },
@@ -1081,7 +1081,7 @@ export const translations = {
     },
     projectPage: {
       gallery: {
-        kicker: '[ O trabalho ]',
+        kicker: '[ O portfolio ]',
         heading: 'Vistas',
         headingEmphasis: 'selecionadas',
       },
@@ -1519,7 +1519,7 @@ export const translations = {
         hero: { line1: 'Clássicos,', line2Pre: 'curados como um ', emphasis: 'catálogo.' },
         summary: 'Uma casa de aluguer de clássicos, apresentada como um catálogo impresso. Design, sistema de identidade e um website à medida com CMS próprio.',
         caseStudy: {
-          eyebrow: 'Trabalho / Estudo de caso',
+          eyebrow: 'Portfolio / Estudo de caso',
           heroSummary: 'Uma casa de aluguer de clássicos, apresentada como um catálogo impresso. Design, sistema de identidade e um website à medida com CMS próprio.',
           meta: {
             year: { label: 'Ano', value: '2026' },
@@ -1619,7 +1619,7 @@ export const translations = {
         hero: { line1: 'O tempo,', line2Pre: 'guardado numa ', emphasis: 'garrafa.' },
         summary: 'Um site de vinhos biológicos do Minho, feito de raiz — scroll cinematográfico, garrafa 3D e um backoffice de gestão completo. Design e código, do princípio ao fim.',
         caseStudy: {
-          eyebrow: 'Trabalho / Estudo de caso',
+          eyebrow: 'Portfolio / Estudo de caso',
           tagline: 'O tempo numa garrafa.',
           heroSummary: 'Um site de vinhos biológicos do Minho, feito de raiz. Da experiência de entrada e do scroll cinematográfico à garrafa 3D e ao backoffice de gestão. Desenho e código, do princípio ao fim.',
           meta: {
@@ -1709,7 +1709,7 @@ export const translations = {
       tagline: 'Feito de floresta.',
       exploreHeading: 'Explorar',
       studio: 'Estúdio',
-      work: 'Trabalho',
+      work: 'Portfolio',
       craft: 'Ofício',
       elsewhereHeading: 'Nas redes',
       instagram: 'Instagram',
