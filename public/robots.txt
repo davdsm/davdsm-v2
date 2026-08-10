@@ -59,5 +59,7 @@ Allow: /
 
 # Crawl hints
 Sitemap: https://davdsm.pt/sitemap.xml
-# Structured brief for AI agents & assistants
+
+# Structured briefs for AI agents & assistants (llms.txt convention)
 # https://davdsm.pt/llms.txt
+# https://davdsm.pt/llms-full.txt

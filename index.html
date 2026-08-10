@@ -12,6 +12,7 @@
     />
     <link rel="canonical" href="https://davdsm.pt/" />
     <link rel="alternate" type="text/plain" title="llms.txt" href="https://davdsm.pt/llms.txt" />
+    <link rel="alternate" type="text/plain" title="llms-full.txt" href="https://davdsm.pt/llms-full.txt" />
     <link rel="sitemap" type="application/xml" href="https://davdsm.pt/sitemap.xml" />
 
     <!-- Open Graph / WhatsApp / Facebook / LinkedIn -->
@@ -41,6 +42,62 @@
     />
     <meta name="twitter:image" content="https://davdsm.pt/og-image.jpg" />
     <meta name="twitter:image:alt" content="DAVDSM studio — a studio grown, not built." />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://davdsm.pt/#organization",
+            "name": "DAVDSM",
+            "url": "https://davdsm.pt/",
+            "logo": "https://davdsm.pt/assets/logo-green.svg",
+            "image": "https://davdsm.pt/og-image.jpg",
+            "email": "geral@davdsm.pt",
+            "foundingDate": "2019",
+            "description": "A Portuguese design and code studio. We grow digital gardens — colour, form and craft, presented in full season.",
+            "slogan": "We grow digital gardens.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "PT"
+            },
+            "areaServed": ["Portugal", "Europe"],
+            "knowsLanguage": ["en", "pt"],
+            "sameAs": [
+              "https://studio.davdsm.pt/landing"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://davdsm.pt/#website",
+            "url": "https://davdsm.pt/",
+            "name": "DAVDSM",
+            "description": "Portfolio and marketing site for DAVDSM, a Portuguese design and code studio.",
+            "publisher": { "@id": "https://davdsm.pt/#organization" },
+            "inLanguage": ["en", "pt"],
+            "potentialAction": {
+              "@type": "CommunicateAction",
+              "target": "mailto:geral@davdsm.pt"
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://davdsm.pt/#studio-product",
+            "name": "Studio",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "url": "https://studio.davdsm.pt/landing",
+            "description": "DAVDSM platform for dance studios, pilates spaces and gyms — messages, invoices and owner-to-student communication.",
+            "creator": { "@id": "https://davdsm.pt/#organization" },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://studio.davdsm.pt/landing"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

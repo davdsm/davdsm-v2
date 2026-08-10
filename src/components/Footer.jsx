@@ -151,7 +151,7 @@ export default function Footer() {
           <span style={{ fontFamily: 'var(--font-serif)', fontSize: 20, color: '#ffffff', marginBottom: 8 }}><Fade>{t('footer.exploreHeading')}</Fade></span>
           <a href="#/studio" className="footer-link" style={{ fontFamily: 'var(--font-sans)', fontSize: 15 }}><Fade>{t('footer.studio')}</Fade></a>
           <a href="#/work" className="footer-link" style={{ fontFamily: 'var(--font-sans)', fontSize: 15 }}><Fade>{t('footer.work')}</Fade></a>
-          <a href="#craft" className="footer-link" style={{ fontFamily: 'var(--font-sans)', fontSize: 15 }}><Fade>{t('footer.craft')}</Fade></a>
+          <a href="#/solutions" className="footer-link" style={{ fontFamily: 'var(--font-sans)', fontSize: 15 }}><Fade>{t('footer.solutions')}</Fade></a>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 13 }}>
           <span style={{ fontFamily: 'var(--font-serif)', fontSize: 20, color: '#ffffff', marginBottom: 8 }}><Fade>{t('footer.elsewhereHeading')}</Fade></span>

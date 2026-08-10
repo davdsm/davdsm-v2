@@ -4,6 +4,7 @@ import PageTransitionOverlay from './components/PageTransitionOverlay'
 import Home from './pages/Home'
 import Studio from './pages/Studio'
 import Work from './pages/Work'
+import Solutions from './pages/Solutions'
 import Project from './pages/Project'
 import Terms from './pages/Terms'
 import Privacy from './pages/Privacy'
@@ -15,6 +16,7 @@ function routeFromHash() {
   if (projectMatch) return { route: 'project', slug: projectMatch[1] }
   if (hash.indexOf('#/studio') === 0) return { route: 'studio', slug: null }
   if (hash.indexOf('#/work') === 0) return { route: 'work', slug: null }
+  if (hash.indexOf('#/solutions') === 0) return { route: 'solutions', slug: null }
   if (hash.indexOf('#/terms') === 0) return { route: 'terms', slug: null }
   if (hash.indexOf('#/privacy') === 0) return { route: 'privacy', slug: null }
   return { route: 'home', slug: null }
@@ -69,6 +71,8 @@ export default function App() {
         <Studio />
       ) : route === 'work' ? (
         <Work />
+      ) : route === 'solutions' ? (
+        <Solutions />
       ) : route === 'project' ? (
         <Project key={projectSlug} slug={projectSlug} />
       ) : route === 'terms' ? (

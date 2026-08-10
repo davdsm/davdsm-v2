@@ -5,7 +5,7 @@ import Fade from './Fade'
 import LiquidGlassFilter from './LiquidGlassFilter'
 
 const MENU_KEYS = ['studio', 'work', 'solutions']
-const MENU_HREFS = { studio: '#/studio', work: '#/work', solutions: '#craft' }
+const MENU_HREFS = { studio: '#/studio', work: '#/work', solutions: '#/solutions' }
 
 export default function Nav() {
   const { t } = useLanguage()
@@ -148,7 +148,7 @@ export default function Nav() {
             <Fade>{t('nav.work')}</Fade>
           </a>
           <a
-            href="#craft"
+            href="#/solutions"
             data-nav-link=""
             className="nav-link"
             style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, color: '#ffffff', borderRadius: 9999 }}
