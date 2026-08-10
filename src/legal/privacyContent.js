@@ -1,8 +1,8 @@
-// Privacy Policy content (RGPD/GDPR — Regulation (EU) 2016/679, and Portuguese
+// Privacy Policy content (RGPD/GDPR, Regulation (EU) 2016/679, and Portuguese
 // Law No. 58/2019 of 8 August, which implements the GDPR domestically).
 //
 // IMPORTANT: replace every [bracketed placeholder] with DAVDSM's real legal
-// details before publishing — see the note left for the user in chat.
+// details before publishing, see the note left for the user in chat.
 
 export const privacyContent = {
   pt: {
@@ -13,7 +13,7 @@ export const privacyContent = {
       'Em caso de divergência entre esta versão e a versão em inglês desta política, prevalece a versão em português.',
     sections: [
       {
-        heading: '1. Quem somos — responsável pelo tratamento',
+        heading: '1. Quem somos · responsável pelo tratamento',
         paragraphs: [
           'O sítio web davdsm.pt ("Site") é operado por [nome legal da empresa / empresário em nome individual], com sede em [morada completa da sede], Portugal, titular do número de identificação fiscal (NIF/NIPC) [XXXXXXXXX], na qualidade de responsável pelo tratamento dos dados pessoais recolhidos através deste Site, nos termos do Regulamento (UE) 2016/679 ("RGPD") e da Lei n.º 58/2019, de 8 de agosto.',
           'Contacto para questões de proteção de dados: geral@davdsm.pt.',
@@ -34,10 +34,10 @@ export const privacyContent = {
       {
         heading: '3. Finalidades e fundamento jurídico do tratamento',
         list: [
-          'Responder a pedidos de contacto e propostas — fundamento no art. 6.º/1(b) do RGPD (diligências pré-contratuais realizadas a seu pedido).',
-          'Gerir uma eventual relação contratual subsequente — art. 6.º/1(b).',
-          'Cumprir obrigações legais, nomeadamente contabilísticas e fiscais, caso venha a existir faturação — art. 6.º/1(c).',
-          'Garantir a segurança do Site e prevenir utilização abusiva — interesse legítimo, art. 6.º/1(f).',
+          'Responder a pedidos de contacto e propostas, fundamento no art. 6.º/1(b) do RGPD (diligências pré-contratuais realizadas a seu pedido).',
+          'Gerir uma eventual relação contratual subsequente, art. 6.º/1(b).',
+          'Cumprir obrigações legais, nomeadamente contabilísticas e fiscais, caso venha a existir faturação, art. 6.º/1(c).',
+          'Garantir a segurança do Site e prevenir utilização abusiva, interesse legítimo, art. 6.º/1(f).',
         ],
         paragraphs: [
           'Nunca utilizamos os seus dados para marketing direto sem o seu consentimento prévio e explícito (art. 6.º/1(a) do RGPD), que pode retirar a qualquer momento, sem que isso comprometa a licitude do tratamento realizado antes dessa retirada.',
@@ -54,7 +54,7 @@ export const privacyContent = {
         heading: '5. Com quem partilhamos os seus dados',
         paragraphs: [
           'Não vendemos nem alugamos os seus dados pessoais a terceiros.',
-          'Podemos partilhar dados com prestadores de serviços que atuam como subcontratantes (art. 28.º do RGPD) — nomeadamente serviços de alojamento web e de email — vinculados por contrato escrito de tratamento de dados.',
+          'Podemos partilhar dados com prestadores de serviços que atuam como subcontratantes (art. 28.º do RGPD) (nomeadamente serviços de alojamento web e de email) vinculados por contrato escrito de tratamento de dados.',
           'O Site incorpora conteúdo multimédia alojado por terceiros (por exemplo, Unsplash e Pexels); o carregamento desse conteúdo pode implicar o registo técnico do seu endereço IP por esses terceiros, nos termos das respetivas políticas de privacidade.',
           'Caso algum prestador esteja localizado fora do Espaço Económico Europeu, a transferência de dados só ocorre ao abrigo de mecanismos adequados (por exemplo, Cláusulas Contratuais-Tipo da Comissão Europeia), assegurando um nível de proteção equivalente ao do RGPD.',
         ],
@@ -64,7 +64,7 @@ export const privacyContent = {
         paragraphs: [
           'Nos termos dos artigos 15.º a 22.º do RGPD, tem o direito de: aceder aos seus dados pessoais; solicitar a sua retificação; solicitar o apagamento ("direito ao esquecimento"); solicitar a limitação do tratamento; opor-se ao tratamento; solicitar a portabilidade dos dados; e retirar o consentimento a qualquer momento.',
           'Pode exercer estes direitos escrevendo para geral@davdsm.pt.',
-          'Tem também o direito de apresentar reclamação junto da autoridade de controlo nacional: Comissão Nacional de Proteção de Dados (CNPD) — Av. D. Carlos I, 134, 1.º, 1200-651 Lisboa, www.cnpd.pt.',
+          'Tem também o direito de apresentar reclamação junto da autoridade de controlo nacional: Comissão Nacional de Proteção de Dados (CNPD), Av. D. Carlos I, 134, 1.º, 1200-651 Lisboa, www.cnpd.pt.',
         ],
       },
       {
@@ -109,7 +109,7 @@ export const privacyContent = {
       'In case of any discrepancy between this version and the Portuguese version of this policy, the Portuguese version shall prevail.',
     sections: [
       {
-        heading: '1. Who we are — data controller',
+        heading: '1. Who we are · data controller',
         paragraphs: [
           'The website davdsm.pt ("Site") is operated by [legal company name / sole trader name], with registered office at [full registered address], Portugal, holder of tax number (NIF/NIPC) [XXXXXXXXX], acting as data controller for the personal data collected through this Site, under Regulation (EU) 2016/679 ("GDPR") and Portuguese Law No. 58/2019, of 8 August.',
           'Contact for data protection matters: geral@davdsm.pt.',
@@ -130,10 +130,10 @@ export const privacyContent = {
       {
         heading: '3. Purposes and legal basis for processing',
         list: [
-          'Responding to enquiries and proposals — Art. 6(1)(b) GDPR (pre-contractual steps taken at your request).',
-          'Managing any resulting business relationship — Art. 6(1)(b).',
-          'Complying with legal obligations, notably accounting and tax obligations should invoicing occur — Art. 6(1)(c).',
-          'Keeping the Site secure and preventing misuse — legitimate interest, Art. 6(1)(f).',
+          'Responding to enquiries and proposals, Art. 6(1)(b) GDPR (pre-contractual steps taken at your request).',
+          'Managing any resulting business relationship, Art. 6(1)(b).',
+          'Complying with legal obligations, notably accounting and tax obligations should invoicing occur, Art. 6(1)(c).',
+          'Keeping the Site secure and preventing misuse, legitimate interest, Art. 6(1)(f).',
         ],
         paragraphs: [
           'We never use your data for direct marketing without your prior, explicit consent (Art. 6(1)(a) GDPR), which you may withdraw at any time without affecting the lawfulness of processing carried out before withdrawal.',
@@ -150,7 +150,7 @@ export const privacyContent = {
         heading: '5. Who we share your data with',
         paragraphs: [
           'We do not sell or rent your personal data to third parties.',
-          'We may share data with service providers acting as processors (Art. 28 GDPR) — namely web hosting and email delivery — bound by a written data processing agreement.',
+          'We may share data with service providers acting as processors (Art. 28 GDPR) (namely web hosting and email delivery) bound by a written data processing agreement.',
           'The Site embeds media hosted by third parties (for example, Unsplash and Pexels); loading that content may cause your IP address to be logged by those third parties under their own privacy policies.',
           'Where any such provider is located outside the European Economic Area, data transfers only take place under appropriate safeguards (e.g. European Commission Standard Contractual Clauses), ensuring a level of protection equivalent to the GDPR.',
         ],
@@ -160,7 +160,7 @@ export const privacyContent = {
         paragraphs: [
           'Under Articles 15 to 22 GDPR you have the right to: access your personal data; request rectification; request erasure ("right to be forgotten"); request restriction of processing; object to processing; request data portability; and withdraw consent at any time.',
           'You can exercise these rights by writing to geral@davdsm.pt.',
-          'You also have the right to lodge a complaint with the national supervisory authority: Comissão Nacional de Proteção de Dados (CNPD) — Av. D. Carlos I, 134, 1.º, 1200-651 Lisbon, Portugal, www.cnpd.pt.',
+          'You also have the right to lodge a complaint with the national supervisory authority: Comissão Nacional de Proteção de Dados (CNPD), Av. D. Carlos I, 134, 1.º, 1200-651 Lisbon, Portugal, www.cnpd.pt.',
         ],
       },
       {

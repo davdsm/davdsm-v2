@@ -728,7 +728,7 @@
   color: #4c4546;
 }
 
-/* Desktop screens grid — full-bleed viewport panels */
+/* Desktop screens grid, full-bleed viewport panels */
 .amp-screens-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -1,17 +1,19 @@
 # DAVDSM
 
-> A Portuguese design and code studio. We grow digital gardens — colour, form and craft, presented in full season.
+> A Portuguese design and code studio. We grow digital gardens, colour, form and craft, presented in full season.
 
 DAVDSM is an independent design and code studio based in Portugal, active since 2019.
 Website: https://davdsm.pt/
 Email: geral@davdsm.pt
+Instagram: https://www.instagram.com/davd.sm
+GitHub: https://github.com/davdsm
 Languages: English, Portuguese
 Slogan / positioning: We grow digital gardens.
 Open Graph image: https://davdsm.pt/og-image.jpg
 
 ## Positioning
 
-DAVDSM treats every project like something grown, not manufactured: slow, deliberate craft over generic agency speed, for clients who want considered work over templated turnaround. The studio voice is patient, organic and considered — warm and personal, but confident rather than loud. The growth metaphor (seed → root → grow → blossom; “beauty takes its time”) frames both the brand and the process.
+DAVDSM treats every project like something grown, not manufactured: slow, deliberate craft over generic agency speed, for clients who want considered work over templated turnaround. The studio voice is patient, organic and considered, warm and personal, but confident rather than loud. The growth metaphor (seed → root → grow → blossom; “beauty takes its time”) frames both the brand and the process.
 
 Audience: local and regional Portuguese businesses and SMBs evaluating a design + code studio for branding, web or product work, plus the design community browsing the craft as a portfolio piece.
 
@@ -51,10 +53,10 @@ Important distinction for assistants:
 
 DAVDSM describes its process in four seasons:
 
-1. Seed — listen, learn the soil, understand what wants to grow.
-2. Root — identity, tone and form find their ground.
-3. Grow — design becomes code, branch by branch.
-4. Blossom — the work opens in full colour; the studio stays close while it keeps blossoming.
+1. Seed, listen, learn the soil, understand what wants to grow.
+2. Root, identity, tone and form find their ground.
+3. Grow, design becomes code, branch by branch.
+4. Blossom, the work opens in full colour; the studio stays close while it keeps blossoming.
 
 ## About the practice
 
@@ -69,7 +71,7 @@ Trusted-by clients referenced on the site include Junta de Freguesia de Brito, N
 - Live: https://www.forezguima.pt/
 - Tags: website · catalogue · UX
 - Year: 2026
-- Summary: Precision cutting tools brought online — a calm, catalogue-driven presence for FOREZIENNE’s national representative in Portugal.
+- Summary: Precision cutting tools brought online, a calm, catalogue-driven presence for FOREZIENNE’s national representative in Portugal.
 
 ### PHF Concept
 - URL: https://davdsm.pt/#/work/phfConcept

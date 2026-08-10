@@ -148,7 +148,7 @@ export const translations = {
         name: 'Forezguima',
         year: '2026',
         tag: 'website · catalogue · UX',
-        description: 'Precision cutting tools, brought online — a calm, catalogue-driven presence for FOREZIENNE’s national representative in Portugal.',
+        description: 'Precision cutting tools, brought online, a calm, catalogue-driven presence for FOREZIENNE’s national representative in Portugal.',
         cta: 'See the full project',
         alt: 'Forezguima website on a MacBook',
       },
@@ -195,8 +195,8 @@ export const translations = {
           pacoDAlem: { name: 'Paço d’Além', tag: 'website', year: '2023' },
           jaCreativeDesign: { name: 'JA Creative Design', tag: 'website', year: '2022' },
           tocaDosAmigos: { name: 'Toca dos Amigos', tag: 'website', year: '2022' },
-          casamentosMariposa: { name: 'Companhia da Mariposa — Casamentos', tag: 'website', year: '2022' },
-          geocachingMariposa: { name: 'Companhia da Mariposa — Geocaching', tag: 'e-commerce', year: '2021' },
+          casamentosMariposa: { name: 'Companhia da Mariposa · Casamentos', tag: 'website', year: '2022' },
+          geocachingMariposa: { name: 'Companhia da Mariposa · Geocaching', tag: 'e-commerce', year: '2021' },
           nerleiAmbiente: { name: 'Nerlei Ambiente', tag: 'website', year: '2020' },
           galeriaFilomenaSoares: { name: 'Galeria Filomena Soares', tag: 'website', year: '2019' },
           boundy: { name: 'Boundy', tag: 'e-commerce', year: '2018' },
@@ -216,7 +216,7 @@ export const translations = {
         line1: 'Products grown',
         line2Pre: 'for real ',
         emphasis: 'studios.',
-        paragraph: 'Software shaped with the same patience as our craft — built to help studio owners stay close to their students.',
+        paragraph: 'Software shaped with the same patience as our craft, built to help studio owners stay close to their students.',
       },
       studio: {
         kicker: '[ Featured solution ]',
@@ -225,7 +225,7 @@ export const translations = {
         name: 'Studio',
         badge: 'DAVDSM',
         tag: 'dance · pilates · gyms',
-        description: 'A DAVDSM platform for dance studios, pilates spaces and gyms — keeping owners and students in sync with messages, invoices and the everyday communication that keeps a studio moving.',
+        description: 'A DAVDSM platform for dance studios, pilates spaces and gyms, keeping owners and students in sync with messages, invoices and the everyday communication that keeps a studio moving.',
         cta: 'Open Studio',
         previewLabel: 'studio.davdsm.pt',
         previewEyebrow: 'For studio owners',
@@ -281,7 +281,7 @@ export const translations = {
         tag: 'website · fashion · UX',
         year: '2022',
         hero: { line1: 'Fashion,', line2Pre: 'built in ', emphasis: 'Portugal.' },
-        summary: 'A cinematic black-on-black showroom connecting international fashion brands with certified Portuguese mills — jersey, knitwear, outerwear, footwear, leather and home textiles.',
+        summary: 'A cinematic black-on-black showroom connecting international fashion brands with certified Portuguese mills, jersey, knitwear, outerwear, footwear, leather and home textiles.',
         caseStudy: {
           eyebrow: 'Case study',
           titleLine1: 'Impero',
@@ -290,7 +290,7 @@ export const translations = {
           tagline: 'A showroom for Portuguese manufacturing.',
           heroSummaryPre: 'Impero Victoria connects international fashion brands with ',
           heroSummaryStrong: 'certified Portuguese mills',
-          heroSummaryPost: ' — jersey, knitwear, outerwear, footwear, leather goods and home textiles. We built a cinematic, black-on-black site where each partner is presented like a fashion campaign instead of a supplier listing.',
+          heroSummaryPost: ': jersey, knitwear, outerwear, footwear, leather goods and home textiles. We built a cinematic, black-on-black site where each partner is presented like a fashion campaign instead of a supplier listing.',
           meta: {
             role: { label: 'Role', value: 'Design & Development' },
             scope: { label: 'Scope', value: 'UX / UI · Frontend · Motion' },
@@ -302,17 +302,17 @@ export const translations = {
             partnerCard: { category: 'knitwear', name: 'INARBEL' },
           },
           challenge: {
-            index: '01 — The challenge',
+            index: '01 · The challenge',
             title: 'Sell an industry that never shows itself.',
-            text: 'Textile sourcing sites look like catalogues: tables, certificates, stock photos of machines. Impero Victoria sells access to craftsmanship, so the site had to feel closer to a fashion editorial — full-bleed imagery, one message per screen, and enough restraint that six very different partners read as one house.',
+            text: 'Textile sourcing sites look like catalogues: tables, certificates, stock photos of machines. Impero Victoria sells access to craftsmanship, so the site had to feel closer to a fashion editorial, full-bleed imagery, one message per screen, and enough restraint that six very different partners read as one house.',
             alt: 'Impero Victoria hero on desktop',
           },
           approach: {
-            index: '02 — The approach',
+            index: '02 · The approach',
             titleLine1: 'Black canvas,',
             titleLine2: 'one yellow.',
-            text: 'Everything is built on pure black with wide extended type set in caps. A single acid yellow carries every action — CTA blocks, active filters, hover states — so the interface never needs a second colour or a border. Partner logos live inside the photography and only surface on hover.',
-            kitLabel: 'The kit — live components',
+            text: 'Everything is built on pure black with wide extended type set in caps. A single acid yellow carries every action (CTA blocks, active filters, hover states) so the interface never needs a second colour or a border. Partner logos live inside the photography and only surface on hover.',
+            kitLabel: 'The kit · live components',
             filters: [
               { label: 'Show All' },
               { label: 'Jersey ', count: 3 },
@@ -326,7 +326,7 @@ export const translations = {
             ],
           },
           screens: {
-            index: '03 — The screens',
+            index: '03 · The screens',
             portfolio: {
               title: 'Logos as the grid',
               text: 'The portfolio is a dark three-column mosaic of the partners’ own factories. Each tile darkens and reveals the partner logo, so brand recognition happens before any text is read.',
@@ -335,14 +335,14 @@ export const translations = {
             services: {
               kicker: 'SERVICES',
               title: 'A slider that reads like a process',
-              text: 'Capabilities — dyeing, printing, washing, manufacturing — are numbered and paged through with Prev / Next. Off-screen frames stay visible as narrow slivers on the left, so the sequence is always legible.',
+              text: 'Capabilities (dyeing, printing, washing, manufacturing) are numbered and paged through with Prev / Next. Off-screen frames stay visible as narrow slivers on the left, so the sequence is always legible.',
               alt: 'Services slider on desktop',
             },
             partner: {
               kicker: 'Partner page',
               titleLine1: 'Half factory,',
               titleLine2: 'half statement.',
-              text: 'Every partner opens as a split screen: a scrolling column of their own facilities on the left, an oversized name and the full profile on the right. Certifications, capacity and category sit at the bottom as plain metadata — no badges, no icons.',
+              text: 'Every partner opens as a split screen: a scrolling column of their own facilities on the left, an oversized name and the full profile on the right. Certifications, capacity and category sit at the bottom as plain metadata, no badges, no icons.',
               alt: 'INARBEL partner page on desktop',
             },
             filters: {
@@ -362,7 +362,7 @@ export const translations = {
             },
           },
           mobile: {
-            index: '04 — On the phone',
+            index: '04 · On the phone',
             titleLine1: 'Full-bleed,',
             titleLine2: 'still full-screen.',
             alts: {
@@ -374,7 +374,7 @@ export const translations = {
             },
           },
           outcome: {
-            index: '05 — The outcome',
+            index: '05 · The outcome',
             title: 'A supplier network that reads like a fashion house.',
             text: 'Six partners, seven categories and a full capability story, delivered on a black canvas with a single accent. Buyers land on imagery, filter by what they make, and reach a decision-ready profile in two clicks.',
             stats: {
@@ -391,7 +391,7 @@ export const translations = {
         tag: 'website · architecture · UX',
         year: '2024',
         hero: { line1: 'Architecture,', line2Pre: 'spoken in ', emphasis: 'silence.' },
-        summary: 'A film-first portfolio for an architecture practice in Braga — full-screen project frames, bilingual PT/EN, and an interface quiet enough to disappear behind the buildings.',
+        summary: 'A film-first portfolio for an architecture practice in Braga, full-screen project frames, bilingual PT/EN, and an interface quiet enough to disappear behind the buildings.',
         caseStudy: {
           eyebrow: 'Case study',
           title: 'Trama',
@@ -399,7 +399,7 @@ export const translations = {
           tagline: 'Architecture that speaks in silence.',
           heroSummaryPre: 'An architecture practice in ',
           heroSummaryStrong: 'Braga',
-          heroSummaryPost: ' with a portfolio of houses, developments and industrial buildings. We built them a full-screen, film-first site where each project opens like a scene — and the interface stays out of the way.',
+          heroSummaryPost: ' with a portfolio of houses, developments and industrial buildings. We built them a full-screen, film-first site where each project opens like a scene, and the interface stays out of the way.',
           meta: {
             role: { label: 'Role', value: 'Design & Development' },
             scope: { label: 'Scope', value: 'UX / UI · Frontend · Motion' },
@@ -419,17 +419,17 @@ export const translations = {
             },
           },
           challenge: {
-            index: '01 — The challenge',
+            index: '01 · The challenge',
             title: 'Let the architecture do the talking.',
             text: 'A studio whose work is photographed beautifully and shown badly. The brief was restraint: full-bleed film and stills, a bilingual PT/EN structure, and typography quiet enough to disappear behind the buildings.',
             alt: 'Trama Arquitetos hero on desktop',
           },
           approach: {
-            index: '02 — The approach',
+            index: '02 · The approach',
             titleLine1: 'One frame,',
             titleLine2: 'one project.',
-            text: 'Every project is a full-viewport frame: category above, name below, a thin circular control to move on. No cards, no shadows, no borders — only image, light type and space. Interface elements are drawn with 1px lines so nothing competes with the photography.',
-            kitLabel: 'The kit — live components',
+            text: 'Every project is a full-viewport frame: category above, name below, a thin circular control to move on. No cards, no shadows, no borders, only image, light type and space. Interface elements are drawn with 1px lines so nothing competes with the photography.',
+            kitLabel: 'The kit · live components',
             nav: ['INÍCIO', 'SOBRE NÓS', 'PROJETOS', 'CONTACTOS'],
             meta: [
               { label: 'LOCALIZAÇÃO', value: 'Braga, Portugal' },
@@ -438,7 +438,7 @@ export const translations = {
             ],
           },
           screens: {
-            index: '03 — The screens',
+            index: '03 · The screens',
             projetos: {
               title: 'A portfolio you can scan',
               text: 'Text-only category filters over a two-column image grid. Titles live inside the photograph and only appear on the projects that need them.',
@@ -447,7 +447,7 @@ export const translations = {
             sobre: {
               kicker: 'SOBRE NÓS',
               title: 'The studio, documented',
-              text: 'A paginated photo essay of the office — pairs of images, a dot rail, and nothing else. The studio’s own culture becomes the argument.',
+              text: 'A paginated photo essay of the office, pairs of images, a dot rail, and nothing else. The studio’s own culture becomes the argument.',
               alt: 'About page on desktop',
             },
             heroLight: {
@@ -464,7 +464,7 @@ export const translations = {
             contact: {
               kicker: 'CONTACTOS',
               title: 'Underlines instead of boxes',
-              text: 'Studio address, two phone lines and a hiring inbox on the left; a form built from single hairlines on the right. No filled inputs, no button — just ENVIAR and an arrow.',
+              text: 'Studio address, two phone lines and a hiring inbox on the left; a form built from single hairlines on the right. No filled inputs, no button, just ENVIAR and an arrow.',
               alt: 'Contact page on desktop',
               form: {
                 name: 'Nome',
@@ -476,7 +476,7 @@ export const translations = {
             },
           },
           mobile: {
-            index: '04 — On the phone',
+            index: '04 · On the phone',
             titleLine1: 'Full-screen,',
             titleLine2: 'even at 390pt.',
             alts: {
@@ -487,9 +487,9 @@ export const translations = {
             },
           },
           outcome: {
-            index: '05 — The outcome',
+            index: '05 · The outcome',
             title: 'A portfolio that behaves like a building.',
-            text: 'Structure first, ornament never. Film-led project stories, a bilingual PT/EN site, filterable categories, and detail pages where the metadata reads like a plan legend — quiet enough that the architecture is the only thing you remember.',
+            text: 'Structure first, ornament never. Film-led project stories, a bilingual PT/EN site, filterable categories, and detail pages where the metadata reads like a plan legend, quiet enough that the architecture is the only thing you remember.',
             stats: {
               projects: { value: '14', label: 'Projects' },
               categories: { value: '5', label: 'Categories' },
@@ -511,9 +511,9 @@ export const translations = {
         tag: 'design · front-end · backoffice',
         year: '2026',
         hero: { line1: 'Air,', line2Pre: 'engineered with ', emphasis: 'precision.' },
-        summary: 'A calm, catalogue-driven website for an industrial ventilation company — real photography, a slate-and-navy system, and a backoffice in five languages.',
+        summary: 'A calm, catalogue-driven website for an industrial ventilation company, real photography, a slate-and-navy system, and a backoffice in five languages.',
         caseStudy: {
-          eyebrow: 'Project — Website',
+          eyebrow: 'Project · Website',
           title: 'PHF Concept',
           summary: 'A site for a company that works with air, metal and precision. Calm structure, real photography, and a system that responds to any screen.',
           meta: {
@@ -532,8 +532,8 @@ export const translations = {
             kicker: 'Responsive',
             title: 'The same system, three widths',
             text: 'The 1440px grid opens up on desktop and folds into a single column on mobile. The solutions carousel becomes a stack of cards; the menu becomes a side panel.',
-            desktopCaption: 'Solutions — carousel, 1440px',
-            mobileCaption: 'Solutions — stack, 390px',
+            desktopCaption: 'Solutions · carousel, 1440px',
+            mobileCaption: 'Solutions · stack, 390px',
             desktopAlt: 'Solutions section on desktop',
             mobileAlt: 'Solutions section on mobile',
           },
@@ -592,9 +592,9 @@ export const translations = {
           screens: {
             kicker: 'Screens',
             title: 'The full journey',
-            sobreCaption: 'About — Industrial efficiency',
+            sobreCaption: 'About · Industrial efficiency',
             sobreAlt: 'About page on desktop',
-            parceirosCaption: 'Partners — Our partners',
+            parceirosCaption: 'Partners · Our partners',
             parceirosAlt: 'Partners section on desktop',
             mobileKicker: 'Mobile',
             mobileTitle: 'One column, without losing the design',
@@ -617,7 +617,7 @@ export const translations = {
         tag: 'website · catalogue · UX',
         year: '2026',
         hero: { line1: 'Precision,', line2Pre: 'cut to a ', emphasis: 'system.' },
-        summary: 'Precision cutting tools, brought online — a calm, catalogue-driven presence for FOREZIENNE’s national representative in Portugal.',
+        summary: 'Precision cutting tools, brought online, a calm, catalogue-driven presence for FOREZIENNE’s national representative in Portugal.',
         caseStudy: {
           eyebrow: 'Case study',
           titlePre: 'Forez',
@@ -625,7 +625,7 @@ export const translations = {
           tagline: 'Precision cutting tools, brought online.',
           heroSummaryPre: 'National representative of ',
           heroSummaryStrong: 'FOREZIENNE',
-          heroSummaryPost: ' in Portugal — sharpening, repair and maintenance of industrial cutting tools. We rebuilt their presence into a calm, precise, catalogue-driven experience.',
+          heroSummaryPost: ' in Portugal, sharpening, repair and maintenance of industrial cutting tools. We rebuilt their presence into a calm, precise, catalogue-driven experience.',
           meta: {
             role: { label: 'Role', value: 'Design & Development' },
             scope: { label: 'Scope', value: 'UX / UI · Frontend · Motion' },
@@ -643,16 +643,16 @@ export const translations = {
             productCard: { category: 'FOREZIENNE', name: 'Serra de fita alimentar', refs: '14 REFERÊNCIAS' },
           },
           challenge: {
-            index: '01 — The challenge',
+            index: '01 · The challenge',
             title: 'As precise as the tools themselves.',
-            text: 'Forty-plus years of workshop expertise and a catalogue of 100+ references — with no digital home to match that rigour. The site had to feel fast, technical when needed, and unmistakably theirs.',
+            text: 'Forty-plus years of workshop expertise and a catalogue of 100+ references, with no digital home to match that rigour. The site had to feel fast, technical when needed, and unmistakably theirs.',
           },
           approach: {
-            index: '02 — The approach',
+            index: '02 · The approach',
             titleLine1: 'A system built from',
             titleLine2: 'forest & steel.',
-            text: 'Forest greens and warm cream, oversized Syne display type, and photography treated as material. Motion stays restrained — a saw-blade loader, gentle reveals, and interface pieces that idle like they\'re waiting to cut.',
-            kitLabel: 'The kit — live components',
+            text: 'Forest greens and warm cream, oversized Syne display type, and photography treated as material. Motion stays restrained, a saw-blade loader, gentle reveals, and interface pieces that idle like they\'re waiting to cut.',
+            kitLabel: 'The kit · live components',
             buttons: { primary: 'Saber mais →', secondary: 'Pedir orçamento →' },
             chips: {
               all: { label: 'Todas', count: '12' },
@@ -663,15 +663,15 @@ export const translations = {
             logoChip: { name: 'FOREZGUIMA', sub: 'REPRESENTAÇÕES' },
           },
           screens: {
-            index: '03 — The screens',
-            oficina: { alt: 'Precisão de oficina', title: 'Precision, on the shop floor.', text: 'Numbered service moments — sharpening, repair, maintenance — each paired with rendered process imagery.' },
-            sobre: { kicker: 'SOBRE', alt: 'Sobre', title: 'The story, on iPad', text: 'Editorial About page — oversized statement type, a documentary photo strip of the team, partners and trade fairs.' },
+            index: '03 · The screens',
+            oficina: { alt: 'Precisão de oficina', title: 'Precision, on the shop floor.', text: 'Numbered service moments (sharpening, repair, maintenance) each paired with rendered process imagery.' },
+            sobre: { kicker: 'SOBRE', alt: 'Sobre', title: 'The story, on iPad', text: 'Editorial About page, oversized statement type, a documentary photo strip of the team, partners and trade fairs.' },
             catalogo: { title: '102 products, one calm grid', text: 'A faceted catalogue with type & machine filters, reference counts, and technical tooth-profile diagrams generated per product.', alt: 'Catálogo' },
-            dark: { kicker: 'Dark chapters', title: 'Also at home in food processing and metalworking.', text: 'Full-bleed green interludes break the catalogue rhythm — video-ready hero blocks that show the tools at work.', alt: 'Alimentar' },
+            dark: { kicker: 'Dark chapters', title: 'Also at home in food processing and metalworking.', text: 'Full-bleed green interludes break the catalogue rhythm, video-ready hero blocks that show the tools at work.', alt: 'Alimentar' },
             product: {
               kicker: 'PRODUCT DETAIL',
               title: 'Editorial product pages',
-              text: 'Serif headlines, a hero render, a quote CTA, and a paginated reference table below — technical depth without the clutter.',
+              text: 'Serif headlines, a hero render, a quote CTA, and a paginated reference table below, technical depth without the clutter.',
               alt: 'Produto',
               table: {
                 headers: { code: 'Código', diameter: 'Ø', bore: 'Furo', direction: 'Sentido' },
@@ -683,11 +683,11 @@ export const translations = {
               },
             },
           },
-          mobile: { index: '04 — On the phone', titleLine1: 'Every gram of precision,', titleLine2: 'pocket-sized.' },
+          mobile: { index: '04 · On the phone', titleLine1: 'Every gram of precision,', titleLine2: 'pocket-sized.' },
           outcome: {
-            index: '05 — The outcome',
+            index: '05 · The outcome',
             title: 'A catalogue that finally cuts as clean as the tools.',
-            text: 'A self-serve catalogue of 100+ references with per-machine filtering, editorial product pages, video-ready chapters, and a contact flow that turns visitors into quote requests — all in one calm, forest-toned system.',
+            text: 'A self-serve catalogue of 100+ references with per-machine filtering, editorial product pages, video-ready chapters, and a contact flow that turns visitors into quote requests, all in one calm, forest-toned system.',
             stats: {
               products: { value: '102', label: 'Products' },
               categories: { value: '6', label: 'Categories' },
@@ -802,7 +802,7 @@ export const translations = {
         tag: 'website · e-commerce · wine',
         year: '2026',
         hero: { line1: 'Time,', line2Pre: 'kept in a ', emphasis: 'bottle.' },
-        summary: 'An organic-wine website from the Minho, built from scratch — cinematic scroll, a 3D bottle and a full management backoffice. Design and code, start to finish.',
+        summary: 'An organic-wine website from the Minho, built from scratch, cinematic scroll, a 3D bottle and a full management backoffice. Design and code, start to finish.',
         caseStudy: {
           eyebrow: 'Work / Case study',
           tagline: 'Time, kept in a bottle.',
@@ -823,7 +823,7 @@ export const translations = {
           },
           overview: {
             quote: '“Some people count the years. AgraWines counts the harvests.” The brand asked for calm, earth and memory. The site had to know how to wait, the way wine does.',
-            p1: 'I designed a sober, sensory experience: an age-gate entrance, a preloader with a counter, and a video hero with parallax. Every section breathes — the wines, the estate, the story and the bottle of the month.',
+            p1: 'I designed a sober, sensory experience: an age-gate entrance, a preloader with a counter, and a video hero with parallax. Every section breathes, the wines, the estate, the story and the bottle of the month.',
             p2: 'On the code side, a React SPA with routes, smooth scrolling, a lazy-loaded 3D bottle and a complete backoffice with real authentication, so the Agra family can manage wines, copy, images and orders without touching code.',
             chips: {
               age: 'Age verification',
@@ -899,7 +899,7 @@ export const translations = {
       solutions: 'Solutions',
       elsewhereHeading: 'Elsewhere',
       instagram: 'Instagram',
-      behance: 'Behance',
+      github: 'GitHub',
       copyright: '© 2026 DAVDSM · davdsm.pt',
       wildFlowers: 'Wild flowers, brighter springs.',
       terms: 'Terms & Conditions',
@@ -917,7 +917,7 @@ export const translations = {
         name: 'Just your name is enough',
         idea: 'A few words is plenty',
         email: 'Looks like that email’s missing something',
-        send: 'Couldn’t send — try again in a moment',
+        send: 'Couldn’t send, try again in a moment',
       },
       back: 'Back',
       send: 'Send',
@@ -1074,7 +1074,7 @@ export const translations = {
         name: 'Forezguima',
         year: '2026',
         tag: 'website · catálogo · UX',
-        description: 'Ferramentas de corte de precisão, agora online — uma presença calma e orientada para o catálogo, para o representante nacional da FOREZIENNE em Portugal.',
+        description: 'Ferramentas de corte de precisão, agora online, uma presença calma e orientada para o catálogo, para o representante nacional da FOREZIENNE em Portugal.',
         cta: 'Ver o projeto completo',
         alt: 'Website Forezguima num MacBook',
       },
@@ -1121,8 +1121,8 @@ export const translations = {
           pacoDAlem: { name: 'Paço d’Além', tag: 'website', year: '2023' },
           jaCreativeDesign: { name: 'JA Creative Design', tag: 'website', year: '2022' },
           tocaDosAmigos: { name: 'Toca dos Amigos', tag: 'website', year: '2022' },
-          casamentosMariposa: { name: 'Companhia da Mariposa — Casamentos', tag: 'website', year: '2022' },
-          geocachingMariposa: { name: 'Companhia da Mariposa — Geocaching', tag: 'e-commerce', year: '2021' },
+          casamentosMariposa: { name: 'Companhia da Mariposa · Casamentos', tag: 'website', year: '2022' },
+          geocachingMariposa: { name: 'Companhia da Mariposa · Geocaching', tag: 'e-commerce', year: '2021' },
           nerleiAmbiente: { name: 'Nerlei Ambiente', tag: 'website', year: '2020' },
           galeriaFilomenaSoares: { name: 'Galeria Filomena Soares', tag: 'website', year: '2019' },
           boundy: { name: 'Boundy', tag: 'e-commerce', year: '2018' },
@@ -1142,7 +1142,7 @@ export const translations = {
         line1: 'Produtos cultivados',
         line2Pre: 'para estúdios ',
         emphasis: 'reais.',
-        paragraph: 'Software com a mesma paciência do nosso ofício — feito para ajudar donos de estúdios a manterem-se próximos dos alunos.',
+        paragraph: 'Software com a mesma paciência do nosso ofício, feito para ajudar donos de estúdios a manterem-se próximos dos alunos.',
       },
       studio: {
         kicker: '[ Solução em destaque ]',
@@ -1151,7 +1151,7 @@ export const translations = {
         name: 'Studio',
         badge: 'DAVDSM',
         tag: 'dança · pilates · ginásios',
-        description: 'Uma plataforma DAVDSM para estúdios de dança, pilates e ginásios — a facilitar a comunicação entre o dono do estúdio e os alunos, com mensagens, faturas e tudo o que mantém o espaço a funcionar.',
+        description: 'Uma plataforma DAVDSM para estúdios de dança, pilates e ginásios, a facilitar a comunicação entre o dono do estúdio e os alunos, com mensagens, faturas e tudo o que mantém o espaço a funcionar.',
         cta: 'Abrir Studio',
         previewLabel: 'studio.davdsm.pt',
         previewEyebrow: 'Para donos de estúdio',
@@ -1207,7 +1207,7 @@ export const translations = {
         tag: 'website · fashion · UX',
         year: '2022',
         hero: { line1: 'Moda,', line2Pre: 'feita em ', emphasis: 'Portugal.' },
-        summary: 'Um showroom cinematográfico em preto sobre preto que liga marcas de moda internacionais a fábricas portuguesas certificadas — jersey, malha, outerwear, calçado, pele e têxteis-lar.',
+        summary: 'Um showroom cinematográfico em preto sobre preto que liga marcas de moda internacionais a fábricas portuguesas certificadas, jersey, malha, outerwear, calçado, pele e têxteis-lar.',
         caseStudy: {
           eyebrow: 'Estudo de caso',
           titleLine1: 'Impero',
@@ -1216,7 +1216,7 @@ export const translations = {
           tagline: 'Um showroom para a indústria portuguesa.',
           heroSummaryPre: 'A Impero Victoria liga marcas de moda internacionais a ',
           heroSummaryStrong: 'fábricas portuguesas certificadas',
-          heroSummaryPost: ' — jersey, malha, outerwear, calçado, artigos em pele e têxteis-lar. Construímos um site cinematográfico, preto sobre preto, em que cada parceiro é apresentado como uma campanha de moda e não como uma listagem de fornecedores.',
+          heroSummaryPost: ': jersey, malha, outerwear, calçado, artigos em pele e têxteis-lar. Construímos um site cinematográfico, preto sobre preto, em que cada parceiro é apresentado como uma campanha de moda e não como uma listagem de fornecedores.',
           meta: {
             role: { label: 'Papel', value: 'Design & Desenvolvimento' },
             scope: { label: 'Âmbito', value: 'UX / UI · Frontend · Motion' },
@@ -1228,17 +1228,17 @@ export const translations = {
             partnerCard: { category: 'knitwear', name: 'INARBEL' },
           },
           challenge: {
-            index: '01 — O desafio',
+            index: '01 · O desafio',
             title: 'Vender uma indústria que nunca se mostra.',
-            text: 'Os sites de sourcing têxtil parecem catálogos: tabelas, certificados, fotos de stock de máquinas. A Impero Victoria vende acesso ao ofício, por isso o site tinha de se aproximar de um editorial de moda — imagem a sangue, uma mensagem por ecrã, e contenção suficiente para que seis parceiros muito diferentes leiam como uma só casa.',
+            text: 'Os sites de sourcing têxtil parecem catálogos: tabelas, certificados, fotos de stock de máquinas. A Impero Victoria vende acesso ao ofício, por isso o site tinha de se aproximar de um editorial de moda, imagem a sangue, uma mensagem por ecrã, e contenção suficiente para que seis parceiros muito diferentes leiam como uma só casa.',
             alt: 'Hero Impero Victoria no desktop',
           },
           approach: {
-            index: '02 — A abordagem',
+            index: '02 · A abordagem',
             titleLine1: 'Tela preta,',
             titleLine2: 'um amarelo.',
-            text: 'Tudo assenta em preto puro, com tipografia alargada em maiúsculas. Um único amarelo ácido transporta cada ação — CTAs, filtros activos, hovers — para a interface nunca precisar de uma segunda cor ou de uma borda. Os logótipos dos parceiros vivem dentro da fotografia e só aparecem no hover.',
-            kitLabel: 'O kit — componentes vivos',
+            text: 'Tudo assenta em preto puro, com tipografia alargada em maiúsculas. Um único amarelo ácido transporta cada ação (CTAs, filtros activos, hovers) para a interface nunca precisar de uma segunda cor ou de uma borda. Os logótipos dos parceiros vivem dentro da fotografia e só aparecem no hover.',
+            kitLabel: 'O kit · componentes vivos',
             filters: [
               { label: 'Show All' },
               { label: 'Jersey ', count: 3 },
@@ -1252,7 +1252,7 @@ export const translations = {
             ],
           },
           screens: {
-            index: '03 — Os ecrãs',
+            index: '03 · Os ecrãs',
             portfolio: {
               title: 'Logótipos como grelha',
               text: 'O portefólio é um mosaico escuro a três colunas das próprias fábricas dos parceiros. Cada tile escurece e revela o logótipo, para o reconhecimento da marca acontecer antes de qualquer texto ser lido.',
@@ -1261,14 +1261,14 @@ export const translations = {
             services: {
               kicker: 'SERVIÇOS',
               title: 'Um slider que se lê como um processo',
-              text: 'As capacidades — tingimento, impressão, lavagem, fabrico — são numeradas e percorridas com Prev / Next. Os frames fora de ecrã ficam visíveis como faixas estreitas à esquerda, para a sequência ser sempre legível.',
+              text: 'As capacidades (tingimento, impressão, lavagem, fabrico) são numeradas e percorridas com Prev / Next. Os frames fora de ecrã ficam visíveis como faixas estreitas à esquerda, para a sequência ser sempre legível.',
               alt: 'Slider de serviços no desktop',
             },
             partner: {
               kicker: 'Página do parceiro',
               titleLine1: 'Metade fábrica,',
               titleLine2: 'metade declaração.',
-              text: 'Cada parceiro abre em ecrã dividido: uma coluna com scroll das próprias instalações à esquerda, um nome oversized e o perfil completo à direita. Certificações, capacidade e categoria ficam em baixo como metadados simples — sem badges, sem ícones.',
+              text: 'Cada parceiro abre em ecrã dividido: uma coluna com scroll das próprias instalações à esquerda, um nome oversized e o perfil completo à direita. Certificações, capacidade e categoria ficam em baixo como metadados simples, sem badges, sem ícones.',
               alt: 'Página do parceiro INARBEL no desktop',
             },
             filters: {
@@ -1288,7 +1288,7 @@ export const translations = {
             },
           },
           mobile: {
-            index: '04 — No telemóvel',
+            index: '04 · No telemóvel',
             titleLine1: 'A sangue,',
             titleLine2: 'ainda a ecrã inteiro.',
             alts: {
@@ -1300,7 +1300,7 @@ export const translations = {
             },
           },
           outcome: {
-            index: '05 — O resultado',
+            index: '05 · O resultado',
             title: 'Uma rede de fornecedores que se lê como uma casa de moda.',
             text: 'Seis parceiros, sete categorias e uma história completa de capacidades, entregues numa tela preta com um único acento. Os compradores aterrçam na imagem, filtram pelo que produzem e chegam a um perfil pronto a decidir em dois cliques.',
             stats: {
@@ -1317,7 +1317,7 @@ export const translations = {
         tag: 'website · arquitetura · UX',
         year: '2024',
         hero: { line1: 'Arquitetura,', line2Pre: 'falada em ', emphasis: 'silêncio.' },
-        summary: 'Um portefólio film-first para um atelier de arquitetura em Braga — enquadramentos a ecrã inteiro, PT/EN bilingue, e uma interface suficientemente quieta para desaparecer atrás dos edifícios.',
+        summary: 'Um portefólio film-first para um atelier de arquitetura em Braga, enquadramentos a ecrã inteiro, PT/EN bilingue, e uma interface suficientemente quieta para desaparecer atrás dos edifícios.',
         caseStudy: {
           eyebrow: 'Estudo de caso',
           title: 'Trama',
@@ -1325,7 +1325,7 @@ export const translations = {
           tagline: 'Arquitetura que fala em silêncio.',
           heroSummaryPre: 'Um atelier de arquitetura em ',
           heroSummaryStrong: 'Braga',
-          heroSummaryPost: ' com um portefólio de casas, empreendimentos e edifícios industriais. Construímos-lhes um site a ecrã inteiro, orientado para o filme, em que cada projeto abre como uma cena — e a interface fica fora do caminho.',
+          heroSummaryPost: ' com um portefólio de casas, empreendimentos e edifícios industriais. Construímos-lhes um site a ecrã inteiro, orientado para o filme, em que cada projeto abre como uma cena, e a interface fica fora do caminho.',
           meta: {
             role: { label: 'Papel', value: 'Design & Desenvolvimento' },
             scope: { label: 'Âmbito', value: 'UX / UI · Frontend · Motion' },
@@ -1345,17 +1345,17 @@ export const translations = {
             },
           },
           challenge: {
-            index: '01 — O desafio',
+            index: '01 · O desafio',
             title: 'Deixar a arquitetura falar.',
             text: 'Um atelier cujo trabalho é fotografado de forma belíssima e mostrado de forma pobre. O briefing era contenção: filme e stills a sangue, estrutura bilingue PT/EN, e tipografia suficientemente quieta para desaparecer atrás dos edifícios.',
             alt: 'Hero Trama Arquitetos no desktop',
           },
           approach: {
-            index: '02 — A abordagem',
+            index: '02 · A abordagem',
             titleLine1: 'Um enquadramento,',
             titleLine2: 'um projeto.',
-            text: 'Cada projeto é um frame a viewport inteira: categoria acima, nome abaixo, um controlo circular fino para avançar. Sem cards, sem sombras, sem bordas — só imagem, tipografia leve e espaço. Os elementos de interface são desenhados com linhas de 1px para nada competir com a fotografia.',
-            kitLabel: 'O kit — componentes vivos',
+            text: 'Cada projeto é um frame a viewport inteira: categoria acima, nome abaixo, um controlo circular fino para avançar. Sem cards, sem sombras, sem bordas, só imagem, tipografia leve e espaço. Os elementos de interface são desenhados com linhas de 1px para nada competir com a fotografia.',
+            kitLabel: 'O kit · componentes vivos',
             nav: ['INÍCIO', 'SOBRE NÓS', 'PROJETOS', 'CONTACTOS'],
             meta: [
               { label: 'LOCALIZAÇÃO', value: 'Braga, Portugal' },
@@ -1364,7 +1364,7 @@ export const translations = {
             ],
           },
           screens: {
-            index: '03 — Os ecrãs',
+            index: '03 · Os ecrãs',
             projetos: {
               title: 'Um portefólio que se percorre',
               text: 'Filtros de categoria só em texto sobre uma grelha de imagens a duas colunas. Os títulos vivem dentro da fotografia e só aparecem nos projetos que precisam deles.',
@@ -1373,7 +1373,7 @@ export const translations = {
             sobre: {
               kicker: 'SOBRE NÓS',
               title: 'O atelier, documentado',
-              text: 'Um ensaio fotográfico paginado do escritório — pares de imagens, um trilho de pontos, e mais nada. A própria cultura do atelier torna-se o argumento.',
+              text: 'Um ensaio fotográfico paginado do escritório, pares de imagens, um trilho de pontos, e mais nada. A própria cultura do atelier torna-se o argumento.',
               alt: 'Página Sobre nós no desktop',
             },
             heroLight: {
@@ -1390,7 +1390,7 @@ export const translations = {
             contact: {
               kicker: 'CONTACTOS',
               title: 'Sublinhados em vez de caixas',
-              text: 'Morada do atelier, duas linhas telefónicas e uma caixa de candidaturas à esquerda; um formulário feito de riscos finos à direita. Sem inputs preenchidos, sem botão — só ENVIAR e uma seta.',
+              text: 'Morada do atelier, duas linhas telefónicas e uma caixa de candidaturas à esquerda; um formulário feito de riscos finos à direita. Sem inputs preenchidos, sem botão, só ENVIAR e uma seta.',
               alt: 'Página de contactos no desktop',
               form: {
                 name: 'Nome',
@@ -1402,7 +1402,7 @@ export const translations = {
             },
           },
           mobile: {
-            index: '04 — No telemóvel',
+            index: '04 · No telemóvel',
             titleLine1: 'Ecrã inteiro,',
             titleLine2: 'mesmo a 390pt.',
             alts: {
@@ -1413,9 +1413,9 @@ export const translations = {
             },
           },
           outcome: {
-            index: '05 — O resultado',
+            index: '05 · O resultado',
             title: 'Um portefólio que se comporta como um edifício.',
-            text: 'Estrutura primeiro, ornamento nunca. Histórias de projecto orientadas pelo filme, site bilingue PT/EN, categorias filtráveis e páginas de detalhe em que os metadados se lêem como a legenda de uma planta — quieto o suficiente para a arquitetura ser a única coisa que se recorda.',
+            text: 'Estrutura primeiro, ornamento nunca. Histórias de projecto orientadas pelo filme, site bilingue PT/EN, categorias filtráveis e páginas de detalhe em que os metadados se lêem como a legenda de uma planta, quieto o suficiente para a arquitetura ser a única coisa que se recorda.',
             stats: {
               projects: { value: '14', label: 'Projetos' },
               categories: { value: '5', label: 'Categorias' },
@@ -1437,9 +1437,9 @@ export const translations = {
         tag: 'design · front-end · backoffice',
         year: '2026',
         hero: { line1: 'Ar,', line2Pre: 'projetado com ', emphasis: 'precisão.' },
-        summary: 'Um site calmo e orientado para catálogo de uma empresa de ventilação industrial — fotografia real, um sistema em ardósia e marinho, e um backoffice em cinco idiomas.',
+        summary: 'Um site calmo e orientado para catálogo de uma empresa de ventilação industrial, fotografia real, um sistema em ardósia e marinho, e um backoffice em cinco idiomas.',
         caseStudy: {
-          eyebrow: 'Projeto — Website',
+          eyebrow: 'Projeto · Website',
           title: 'PHF Concept',
           summary: 'Um site para uma empresa que trabalha com ar, metal e precisão. Estrutura calma, fotografia real e um sistema que responde a qualquer ecrã.',
           meta: {
@@ -1458,8 +1458,8 @@ export const translations = {
             kicker: 'Responsivo',
             title: 'O mesmo sistema, três larguras',
             text: 'A grelha de 1440px abre-se em desktop e recolhe para uma coluna em telemóvel. O carrossel de soluções torna-se pilha de cartões; o menu torna-se painel lateral.',
-            desktopCaption: 'Soluções — carrossel, 1440px',
-            mobileCaption: 'Soluções — pilha, 390px',
+            desktopCaption: 'Soluções, carrossel, 1440px',
+            mobileCaption: 'Soluções, pilha, 390px',
             desktopAlt: 'Secção de soluções em desktop',
             mobileAlt: 'Secção de soluções em telemóvel',
           },
@@ -1518,9 +1518,9 @@ export const translations = {
           screens: {
             kicker: 'Ecrãs',
             title: 'Percurso completo',
-            sobreCaption: 'Sobre — Eficiência industrial',
+            sobreCaption: 'Sobre, Eficiência industrial',
             sobreAlt: 'Página Sobre em desktop',
-            parceirosCaption: 'Parceiros — Os nossos parceiros',
+            parceirosCaption: 'Parceiros, Os nossos parceiros',
             parceirosAlt: 'Secção de parceiros em desktop',
             mobileKicker: 'Telemóvel',
             mobileTitle: 'Uma coluna, sem perder o desenho',
@@ -1543,7 +1543,7 @@ export const translations = {
         tag: 'website · catálogo · UX',
         year: '2026',
         hero: { line1: 'Precisão,', line2Pre: 'cortada à ', emphasis: 'medida.' },
-        summary: 'Ferramentas de corte de precisão, agora online — uma presença calma e orientada para o catálogo, para o representante nacional da FOREZIENNE em Portugal.',
+        summary: 'Ferramentas de corte de precisão, agora online, uma presença calma e orientada para o catálogo, para o representante nacional da FOREZIENNE em Portugal.',
         caseStudy: {
           eyebrow: 'Estudo de caso',
           titlePre: 'Forez',
@@ -1551,7 +1551,7 @@ export const translations = {
           tagline: 'Ferramentas de corte de precisão, agora online.',
           heroSummaryPre: 'Representante nacional da ',
           heroSummaryStrong: 'FOREZIENNE',
-          heroSummaryPost: ' em Portugal — afiação, reparação e manutenção de ferramentas de corte industriais. Reconstruímos a sua presença numa experiência calma, precisa e orientada para o catálogo.',
+          heroSummaryPost: ' em Portugal, afiação, reparação e manutenção de ferramentas de corte industriais. Reconstruímos a sua presença numa experiência calma, precisa e orientada para o catálogo.',
           meta: {
             role: { label: 'Papel', value: 'Design & Desenvolvimento' },
             scope: { label: 'Âmbito', value: 'UX / UI · Frontend · Motion' },
@@ -1569,16 +1569,16 @@ export const translations = {
             productCard: { category: 'FOREZIENNE', name: 'Serra de fita alimentar', refs: '14 REFERÊNCIAS' },
           },
           challenge: {
-            index: '01 — O desafio',
+            index: '01 · O desafio',
             title: 'Tão precisos quanto as próprias ferramentas.',
-            text: 'Mais de 40 anos de experiência de oficina e um catálogo com mais de 100 referências — sem uma casa digital à altura desse rigor. O site tinha de ser rápido, técnico quando necessário, e inequivocamente deles.',
+            text: 'Mais de 40 anos de experiência de oficina e um catálogo com mais de 100 referências, sem uma casa digital à altura desse rigor. O site tinha de ser rápido, técnico quando necessário, e inequivocamente deles.',
           },
           approach: {
-            index: '02 — A abordagem',
+            index: '02 · A abordagem',
             titleLine1: 'Um sistema construído a partir de',
             titleLine2: 'floresta e aço.',
-            text: 'Verdes de floresta e creme quente, tipografia Syne em grande escala, e fotografia tratada como material. O movimento mantém-se contido — um loader em forma de serra, revelações suaves, e peças de interface que ficam em repouso como se esperassem para cortar.',
-            kitLabel: 'O kit — componentes ao vivo',
+            text: 'Verdes de floresta e creme quente, tipografia Syne em grande escala, e fotografia tratada como material. O movimento mantém-se contido, um loader em forma de serra, revelações suaves, e peças de interface que ficam em repouso como se esperassem para cortar.',
+            kitLabel: 'O kit, componentes ao vivo',
             buttons: { primary: 'Saber mais →', secondary: 'Pedir orçamento →' },
             chips: {
               all: { label: 'Todas', count: '12' },
@@ -1589,15 +1589,15 @@ export const translations = {
             logoChip: { name: 'FOREZGUIMA', sub: 'REPRESENTAÇÕES' },
           },
           screens: {
-            index: '03 — Os ecrãs',
-            oficina: { alt: 'Precisão de oficina', title: 'Precisão, no chão de fábrica.', text: 'Momentos de serviço numerados — afiação, reparação, manutenção — cada um emparelhado com imagens de processo renderizadas.' },
-            sobre: { kicker: 'SOBRE', alt: 'Sobre', title: 'A história, no iPad', text: 'Página Sobre editorial — tipografia de grande escala, uma tira fotográfica documental da equipa, parceiros e feiras.' },
+            index: '03 · Os ecrãs',
+            oficina: { alt: 'Precisão de oficina', title: 'Precisão, no chão de fábrica.', text: 'Momentos de serviço numerados (afiação, reparação, manutenção) cada um emparelhado com imagens de processo renderizadas.' },
+            sobre: { kicker: 'SOBRE', alt: 'Sobre', title: 'A história, no iPad', text: 'Página Sobre editorial, tipografia de grande escala, uma tira fotográfica documental da equipa, parceiros e feiras.' },
             catalogo: { title: '102 produtos, uma grelha calma', text: 'Um catálogo com filtros por tipo e máquina, contagem de referências, e diagramas técnicos de perfil de dente gerados por produto.', alt: 'Catálogo' },
-            dark: { kicker: 'Capítulos escuros', title: 'Também em casa na alimentar e na metalomecânica.', text: 'Interlúdios verdes a toda a largura quebram o ritmo do catálogo — blocos hero prontos para vídeo que mostram as ferramentas em ação.', alt: 'Alimentar' },
+            dark: { kicker: 'Capítulos escuros', title: 'Também em casa na alimentar e na metalomecânica.', text: 'Interlúdios verdes a toda a largura quebram o ritmo do catálogo, blocos hero prontos para vídeo que mostram as ferramentas em ação.', alt: 'Alimentar' },
             product: {
               kicker: 'DETALHE DO PRODUTO',
               title: 'Páginas de produto editoriais',
-              text: 'Títulos serifados, um render hero, uma citação com CTA, e uma tabela de referências paginada abaixo — profundidade técnica sem confusão visual.',
+              text: 'Títulos serifados, um render hero, uma citação com CTA, e uma tabela de referências paginada abaixo, profundidade técnica sem confusão visual.',
               alt: 'Produto',
               table: {
                 headers: { code: 'Código', diameter: 'Ø', bore: 'Furo', direction: 'Sentido' },
@@ -1609,11 +1609,11 @@ export const translations = {
               },
             },
           },
-          mobile: { index: '04 — No telemóvel', titleLine1: 'Cada grama de precisão,', titleLine2: 'de bolso.' },
+          mobile: { index: '04 · No telemóvel', titleLine1: 'Cada grama de precisão,', titleLine2: 'de bolso.' },
           outcome: {
-            index: '05 — O resultado',
+            index: '05 · O resultado',
             title: 'Um catálogo que finalmente corta tão bem como as ferramentas.',
-            text: 'Um catálogo self-serve com mais de 100 referências, filtragem por máquina, páginas de produto editoriais, capítulos prontos para vídeo, e um fluxo de contacto que transforma visitantes em pedidos de orçamento — tudo num sistema calmo, em tons de floresta.',
+            text: 'Um catálogo self-serve com mais de 100 referências, filtragem por máquina, páginas de produto editoriais, capítulos prontos para vídeo, e um fluxo de contacto que transforma visitantes em pedidos de orçamento, tudo num sistema calmo, em tons de floresta.',
             stats: {
               products: { value: '102', label: 'Produtos' },
               categories: { value: '6', label: 'Categorias' },
@@ -1728,7 +1728,7 @@ export const translations = {
         tag: 'site · e-commerce · vinho',
         year: '2026',
         hero: { line1: 'O tempo,', line2Pre: 'guardado numa ', emphasis: 'garrafa.' },
-        summary: 'Um site de vinhos biológicos do Minho, feito de raiz — scroll cinematográfico, garrafa 3D e um backoffice de gestão completo. Design e código, do princípio ao fim.',
+        summary: 'Um site de vinhos biológicos do Minho, feito de raiz, scroll cinematográfico, garrafa 3D e um backoffice de gestão completo. Design e código, do princípio ao fim.',
         caseStudy: {
           eyebrow: 'Portfolio / Estudo de caso',
           tagline: 'O tempo numa garrafa.',
@@ -1825,7 +1825,7 @@ export const translations = {
       solutions: 'Soluções',
       elsewhereHeading: 'Nas redes',
       instagram: 'Instagram',
-      behance: 'Behance',
+      github: 'GitHub',
       copyright: '© 2026 DAVDSM · davdsm.pt',
       wildFlowers: 'Flores selvagens, primaveras mais luminosas.',
       terms: 'Termos e Condições',
@@ -1843,7 +1843,7 @@ export const translations = {
         name: 'Basta o seu nome',
         idea: 'Bastam algumas palavras',
         email: 'Parece que falta algo nesse email',
-        send: 'Não foi possível enviar — tente de novo dentro de momentos',
+        send: 'Não foi possível enviar, tente de novo dentro de momentos',
       },
       back: 'Voltar',
       send: 'Enviar',

@@ -37,7 +37,7 @@ function buildDisplacementMap({ width, height, depth }) {
       }
 
       // Refraction is strongest right at the border and eases to nothing at
-      // the interior edge of the band — the convex-lens rim of Liquid Glass.
+      // the interior edge of the band, the convex-lens rim of Liquid Glass.
       const t = -d / band // 0 at the border, 1 at the flat interior
       const magnitude = (1 - t) ** 2
 
@@ -62,7 +62,7 @@ const KEEP_B = '0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0'
 
 /**
  * Renders a hidden SVG <filter> that refracts whatever sits behind
- * `targetRef` via feDisplacementMap — the backdrop visibly bends around the
+ * `targetRef` via feDisplacementMap, the backdrop visibly bends around the
  * pill's border like real glass, with chromatic aberration on the rim (each
  * RGB channel displaced at a slightly different strength, like a prism).
  * Desktop-only: skips all work below 701px.

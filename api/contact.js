@@ -50,10 +50,10 @@ function clientCopy(lang, name) {
 
   if (lang === 'pt') {
     return {
-      subject: 'Obrigado — recebemos a sua mensagem',
+      subject: 'Obrigado · recebemos a sua mensagem',
       greeting: first ? `Obrigado, ${first}.` : 'Obrigado.',
       body1:
-        'Recebemos a sua mensagem. Alguém do estúdio responde em breve — normalmente em poucos dias.',
+        'Recebemos a sua mensagem. Alguém do estúdio responde em breve, normalmente em poucos dias.',
       body2:
         'Enquanto isso, pode explorar o jardim em <a href="https://davdsm.pt/" style="color:#357248;text-decoration:none;">davdsm.pt</a>.',
       tagline: 'Crescido, não construído.',
@@ -62,10 +62,10 @@ function clientCopy(lang, name) {
   }
 
   return {
-    subject: 'Thank you — we got your message',
+    subject: 'Thank you · we got your message',
     greeting: `Thank you, ${first || 'there'}.`,
     body1:
-      'We received your message. Someone from the studio will write back soon — usually within a couple of days.',
+      'We received your message. Someone from the studio will write back soon, usually within a couple of days.',
     body2:
       'Meanwhile, you’re welcome to browse the garden at <a href="https://davdsm.pt/" style="color:#357248;text-decoration:none;">davdsm.pt</a>.',
     tagline: 'Grown, not built.',

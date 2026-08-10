@@ -155,8 +155,8 @@ export default function Footer() {
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 13 }}>
           <span style={{ fontFamily: 'var(--font-serif)', fontSize: 20, color: '#ffffff', marginBottom: 8 }}><Fade>{t('footer.elsewhereHeading')}</Fade></span>
-          <a href="#" className="footer-link" style={{ fontFamily: 'var(--font-sans)', fontSize: 15 }}><Fade>{t('footer.instagram')}</Fade></a>
-          <a href="#" className="footer-link" style={{ fontFamily: 'var(--font-sans)', fontSize: 15 }}><Fade>{t('footer.behance')}</Fade></a>
+          <a href="https://www.instagram.com/davd.sm" target="_blank" rel="noopener noreferrer" className="footer-link" style={{ fontFamily: 'var(--font-sans)', fontSize: 15 }}><Fade>{t('footer.instagram')}</Fade></a>
+          <a href="https://github.com/davdsm" target="_blank" rel="noopener noreferrer" className="footer-link" style={{ fontFamily: 'var(--font-sans)', fontSize: 15 }}><Fade>{t('footer.github')}</Fade></a>
           <a href="mailto:geral@davdsm.pt" className="footer-link" style={{ fontFamily: 'var(--font-sans)', fontSize: 15 }}>geral@davdsm.pt</a>
         </div>
       </div>
@@ -184,7 +184,7 @@ export default function Footer() {
         <div className="footer-bottom-bar-links" style={{ display: 'flex', alignItems: 'center' }}>
           <a href="#/terms" className="footer-link" style={{ fontFamily: 'var(--font-sans)', fontSize: 13, whiteSpace: 'nowrap' }}><Fade>{t('footer.terms')}</Fade></a>
           <a href="#/privacy" className="footer-link" style={{ fontFamily: 'var(--font-sans)', fontSize: 13, whiteSpace: 'nowrap' }}><Fade>{t('footer.privacy')}</Fade></a>
-          <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 14, color: '#ffffff' }}><Fade>{t('footer.wildFlowers')}</Fade></span>
+          <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 14, color: '#ffffff', whiteSpace: 'nowrap' }}><Fade>{t('footer.wildFlowers')}</Fade></span>
         </div>
       </div>
     </footer>

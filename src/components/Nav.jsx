@@ -18,7 +18,7 @@ export default function Nav() {
     if (menuOpen) {
       setPhase('entering')
       // Double rAF: the first frame commits the "entering" (off-screen) style,
-      // the second flips to "open" — a single rAF can land before the browser
+      // the second flips to "open", a single rAF can land before the browser
       // has painted the initial transform, so the slide-in never animates.
       const raf1 = requestAnimationFrame(() => {
         const raf2 = requestAnimationFrame(() => setPhase('open'))

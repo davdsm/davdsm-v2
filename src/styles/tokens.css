@@ -1,5 +1,5 @@
 /* =============================================
-   DAVDSM Design System — Colors & Typography
+   DAVDSM Design System, Colors & Typography
    Portuguese design+dev agency, nature/forest theme
    ============================================= */
 
@@ -106,7 +106,7 @@
   --font-serif:    'Source Serif 4', Georgia, serif;         /* editorial / pull quotes */
   --font-mono:     'JetBrains Mono', 'Fira Code', monospace; /* code */
 
-  /* Font sizes — fluid scale */
+  /* Font sizes, fluid scale */
   --text-xs:   0.75rem;    /* 12px */
   --text-sm:   0.875rem;   /* 14px */
   --text-base: 1rem;       /* 16px */

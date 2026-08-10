@@ -1,6 +1,6 @@
 /**
  * Real project imagery, keyed by slug. Text (name, tag, summary, hero copy)
- * lives in translations.js under workPage.recent.projects.<slug> — this file
+ * lives in translations.js under workPage.recent.projects.<slug>, this file
  * only holds the language-independent asset paths.
  */
 export const PROJECTS = {

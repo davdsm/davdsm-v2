@@ -11,7 +11,7 @@ const MOTION_INTENSITY = 1
 
 const FEATURED_KEY = 'forezguima'
 
-/* Petal positions/tints echo the page-transition petals — same shape language,
+/* Petal positions/tints echo the page-transition petals, same shape language,
    here drifting in place instead of falling. */
 const BLOOM_PETALS = [
   { top: '10%', left: '4%', size: [18, 12], color: '#f6cfd9', dur: 11, delay: 0 },

@@ -75,7 +75,7 @@
 
 /* The map's stroke/dots/labels are sized in the SVG's own coordinate space, so
    they scale down with the whole graphic depending on how much narrower the
-   container is than the 800-unit viewBox — bump them so the line, dots, and
+   container is than the 800-unit viewBox, bump them so the line, dots, and
    place labels stay clearly visible instead of shrinking to near-invisible
    hairlines/fine print. */
 [data-map-dot-label] {

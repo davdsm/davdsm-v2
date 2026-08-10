@@ -4,7 +4,7 @@
 // Resolution).
 //
 // IMPORTANT: replace every [bracketed placeholder] with DAVDSM's real legal
-// details before publishing — see the note left for the user in chat.
+// details before publishing, see the note left for the user in chat.
 
 export const termsContent = {
   pt: {
@@ -31,7 +31,7 @@ export const termsContent = {
       {
         heading: '3. Propriedade intelectual',
         paragraphs: [
-          'Salvo indicação em contrário, todos os conteúdos do Site — incluindo textos, design, código, layout, logótipos e imagens próprias — são propriedade da DAVDSM ou dos seus clientes/parceiros, e encontram-se protegidos pelo Código do Direito de Autor e dos Direitos Conexos e demais legislação aplicável em matéria de propriedade intelectual e industrial.',
+          'Salvo indicação em contrário, todos os conteúdos do Site (incluindo textos, design, código, layout, logótipos e imagens próprias) são propriedade da DAVDSM ou dos seus clientes/parceiros, e encontram-se protegidos pelo Código do Direito de Autor e dos Direitos Conexos e demais legislação aplicável em matéria de propriedade intelectual e industrial.',
           'Alguns projetos apresentados no portefólio podem constituir propriedade intelectual de clientes da DAVDSM, exibidos com a devida autorização, para fins de demonstração do trabalho realizado.',
           'Determinado conteúdo multimédia (fotografias e vídeos) é disponibilizado por terceiros (nomeadamente Unsplash e Pexels), ao abrigo das respetivas licenças gratuitas de utilização.',
           'É proibida a reprodução, distribuição, modificação ou utilização comercial de qualquer conteúdo do Site sem autorização prévia e escrita da DAVDSM, salvo nos casos permitidos por lei.',
@@ -57,7 +57,7 @@ export const termsContent = {
         heading: '6. Limitação de responsabilidade',
         paragraphs: [
           'O Site é disponibilizado "tal como está", sem garantias de disponibilidade ininterrupta ou de ausência de erros.',
-          'Na máxima medida permitida pela lei portuguesa, a DAVDSM não se responsabiliza por danos indiretos, lucros cessantes ou danos emergentes resultantes da utilização ou impossibilidade de utilização do Site, sem prejuízo da responsabilidade que, por norma legal imperativa — nomeadamente em caso de dolo ou negligência grave, ou de direitos de consumidores que não possam ser afastados por acordo — não possa ser limitada ou excluída.',
+          'Na máxima medida permitida pela lei portuguesa, a DAVDSM não se responsabiliza por danos indiretos, lucros cessantes ou danos emergentes resultantes da utilização ou impossibilidade de utilização do Site, sem prejuízo da responsabilidade que, por norma legal imperativa (nomeadamente em caso de dolo ou negligência grave, ou de direitos de consumidores que não possam ser afastados por acordo) não possa ser limitada ou excluída.',
         ],
       },
       {
@@ -111,7 +111,7 @@ export const termsContent = {
       {
         heading: '3. Intellectual property',
         paragraphs: [
-          'Unless stated otherwise, all content on the Site — including text, design, code, layout, logos, and original imagery — is owned by DAVDSM or its clients/partners, and is protected under the Portuguese Copyright and Related Rights Code (Código do Direito de Autor e dos Direitos Conexos) and other applicable intellectual and industrial property legislation.',
+          'Unless stated otherwise, all content on the Site (including text, design, code, layout, logos, and original imagery) is owned by DAVDSM or its clients/partners, and is protected under the Portuguese Copyright and Related Rights Code (Código do Direito de Autor e dos Direitos Conexos) and other applicable intellectual and industrial property legislation.',
           'Some projects shown in the portfolio may constitute the intellectual property of DAVDSM clients, displayed with due authorisation for portfolio demonstration purposes.',
           'Certain media (photographs and videos) is provided by third parties (namely Unsplash and Pexels) under their respective free-use licences.',
           'Reproducing, distributing, modifying, or commercially exploiting any content on the Site without DAVDSM\'s prior written authorisation is prohibited, except where permitted by law.',
@@ -137,7 +137,7 @@ export const termsContent = {
         heading: '6. Limitation of liability',
         paragraphs: [
           'The Site is provided "as is", without warranties of uninterrupted availability or error-free operation.',
-          'To the maximum extent permitted under Portuguese law, DAVDSM is not liable for indirect damages, loss of profit, or consequential damages arising from use, or inability to use, the Site, without prejudice to any liability that, under mandatory legal rules — namely in cases of wilful misconduct or gross negligence, or consumer rights that cannot be waived by agreement — cannot be limited or excluded.',
+          'To the maximum extent permitted under Portuguese law, DAVDSM is not liable for indirect damages, loss of profit, or consequential damages arising from use, or inability to use, the Site, without prejudice to any liability that, under mandatory legal rules (namely in cases of wilful misconduct or gross negligence, or consumer rights that cannot be waived by agreement) cannot be limited or excluded.',
         ],
       },
       {
