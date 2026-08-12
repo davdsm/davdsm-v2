@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alojamento · DAVDSM</title>
+  <meta name="description" content="Alojamento de website — 15€/mês ou 150€/ano. Pagamento seguro via Stripe." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #141414;
+      --ink-soft: #5c5c5c;
+      --line: #e6e6e6;
+      --paper: #ffffff;
+      --wash: #f5f5f3;
+      --wash-deep: #ebebe8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: "Instrument Sans", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, var(--wash) 0%, var(--paper) 42%, var(--wash) 100%);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .shell {
+      width: min(880px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 72px 0 88px;
+    }
+
+    header {
+      max-width: 520px;
+      margin-bottom: 48px;
+    }
+
+    .brand {
+      margin: 0 0 28px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Instrument Serif", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(2.5rem, 6vw, 3.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 1.0625rem;
+      line-height: 1.55;
+      max-width: 38ch;
+    }
+
+    .plans {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .plan {
+      background: var(--paper);
+      padding: 36px 32px 32px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .plan-label {
+      margin: 0 0 20px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .amount {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin: 0 0 8px;
+    }
+
+    .amount strong {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 3.25rem;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .amount span {
+      font-size: 1rem;
+      color: var(--ink-soft);
+    }
+
+    .detail {
+      margin: 0 0 28px;
+      color: var(--ink-soft);
+      font-size: 0.9375rem;
+      line-height: 1.45;
+      min-height: 2.9em;
+    }
+
+    .features {
+      list-style: none;
+      margin: 0 0 36px;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .features li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 0.9375rem;
+      line-height: 1.4;
+      color: var(--ink);
+    }
+
+    .features li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 6px;
+      height: 1px;
+      background: var(--ink);
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 15px 18px;
+      background: var(--ink);
+      color: var(--paper);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .cta:hover {
+      background: #2a2a2a;
+    }
+
+    .cta:active {
+      transform: translateY(1px);
+    }
+
+    .plan.yearly .cta {
+      background: var(--ink);
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      justify-content: space-between;
+      color: var(--ink-soft);
+      font-size: 0.875rem;
+    }
+
+    footer a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    footer a:hover {
+      border-bottom-color: var(--ink);
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(100% - 32px, 880px);
+        padding: 48px 0 64px;
+      }
+
+      .plans {
+        grid-template-columns: 1fr;
+      }
+
+      .plan {
+        padding: 28px 24px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="brand">DAVDSM</p>
+      <h1>Alojamento</h1>
+      <p class="lead">Hosting, SSL, manutenção e suporte. Escolhe o ciclo de faturação e conclui o pagamento com segurança.</p>
+    </header>
+
+    <section class="plans" aria-label="Planos de alojamento">
+      <article class="plan monthly">
+        <p class="plan-label">Mensal</p>
+        <p class="amount"><strong>15€</strong><span>/ mês</span></p>
+        <p class="detail">Faturação mensal. Cancela quando quiseres.</p>
+        <ul class="features">
+          <li>Hosting e certificado SSL</li>
+          <li>Manutenção técnica</li>
+          <li>Backups regulares</li>
+          <li>Suporte por email</li>
+        </ul>
+        <a class="cta" href="https://buy.stripe.com/6oU9AT0ly5gtaOD27CcMM0t">Subscrever</a>
+      </article>
+
+      <article class="plan yearly">
+        <p class="plan-label">Anual</p>
+        <p class="amount"><strong>150€</strong><span>/ ano</span></p>
+        <p class="detail">Equivalente a 12,50€/mês. Dois meses incluídos.</p>
+        <ul class="features">
+          <li>Hosting e certificado SSL</li>
+          <li>Manutenção técnica</li>
+          <li>Backups regulares</li>
+          <li>Suporte por email</li>
+        </ul>
+        <a class="cta" href="https://buy.stripe.com/28EdR9gkwgZbg8XaE8cMM0s">Subscrever</a>
+      </article>
+    </section>
+
+    <footer>
+      <span>Pagamento processado pela Stripe</span>
+      <a href="mailto:geral@davdsm.pt">geral@davdsm.pt</a>
+    </footer>
+  </main>
+</body>
+</html>
