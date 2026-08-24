@@ -32,7 +32,7 @@ function getRecent(t) {
     year: t(`workPage.recent.projects.${key}.year`),
     cover: PROJECTS[key]?.cover,
     hoverCover: PROJECTS[key]?.hoverCover,
-    href: PROJECTS[key] ? `#/work/${key}` : undefined,
+    href: PROJECTS[key] ? `/work/${key}` : undefined,
   }))
 }
 
@@ -54,7 +54,7 @@ export default function Work() {
     year: t('workPage.featured.year'),
     cover: PROJECTS[FEATURED_KEY]?.cover,
     hoverCover: PROJECTS[FEATURED_KEY]?.hoverCover,
-    href: `#/work/${FEATURED_KEY}`,
+    href: `/work/${FEATURED_KEY}`,
   }
   const RECENT = getRecent(t)
   const ARCHIVE = getArchive(t)
@@ -105,7 +105,7 @@ export default function Work() {
       const href = a.getAttribute('href')
       const id = href.slice(1)
       if (id === '/') {
-        window.location.hash = '#/'
+        window.history.pushState({}, '', '/'); window.dispatchEvent(new PopStateEvent('popstate'))
         return
       }
       const target = id ? document.getElementById(id) : document.body

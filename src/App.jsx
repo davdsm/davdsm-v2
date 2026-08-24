@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Nav from './components/Nav'
 import PageTransitionOverlay from './components/PageTransitionOverlay'
+import PageSeo from './components/PageSeo'
 import Home from './pages/Home'
 import Studio from './pages/Studio'
 import Work from './pages/Work'
@@ -9,22 +10,17 @@ import Project from './pages/Project'
 import Terms from './pages/Terms'
 import Privacy from './pages/Privacy'
 import { LanguageProvider } from './i18n/LanguageContext'
+import { navigate, parseLocation, redirectLegacyHash } from './lib/routing'
 
-function routeFromHash() {
-  const hash = window.location.hash
-  const projectMatch = hash.match(/^#\/work\/([^/?#]+)/)
-  if (projectMatch) return { route: 'project', slug: projectMatch[1] }
-  if (hash.indexOf('#/studio') === 0) return { route: 'studio', slug: null }
-  if (hash.indexOf('#/work') === 0) return { route: 'work', slug: null }
-  if (hash.indexOf('#/solutions') === 0) return { route: 'solutions', slug: null }
-  if (hash.indexOf('#/terms') === 0) return { route: 'terms', slug: null }
-  if (hash.indexOf('#/privacy') === 0) return { route: 'privacy', slug: null }
-  return { route: 'home', slug: null }
+function readRoute() {
+  redirectLegacyHash()
+  return parseLocation(window.location.pathname, window.location.hash)
 }
 
 export default function App() {
-  const [route, setRoute] = useState('home')
-  const [projectSlug, setProjectSlug] = useState(null)
+  const initial = readRoute()
+  const [route, setRoute] = useState(initial.route)
+  const [projectSlug, setProjectSlug] = useState(initial.slug)
   const [visited, setVisited] = useState(false)
   const transitionRef = useRef(null)
   const routeRef = useRef(route)
@@ -33,37 +29,85 @@ export default function App() {
   projectSlugRef.current = projectSlug
 
   useEffect(() => {
-    const handleHash = () => {
-      const hash = window.location.hash
-      const { route: nextRoute, slug: nextSlug } = routeFromHash()
-      if (nextRoute === routeRef.current && nextSlug === projectSlugRef.current) return
+    const applyFromLocation = ({ withTransition = true } = {}) => {
+      const { route: nextRoute, slug: nextSlug } = readRoute()
+      if (nextRoute === routeRef.current && nextSlug === projectSlugRef.current) {
+        // Same page: allow home in-page hash scroll (e.g. /#contact)
+        if (nextRoute === 'home' && window.location.hash && window.location.hash.charAt(1) !== '/') {
+          const id = window.location.hash.slice(1)
+          const el = id && document.getElementById(id)
+          if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY, behavior: 'smooth' })
+        }
+        return
+      }
 
       const applyRoute = () => {
         setRoute(nextRoute)
         setProjectSlug(nextSlug)
         setVisited(true)
         window.scrollTo(0, 0)
-        const id = hash.charAt(1) === '/' ? '' : hash.slice(1)
-        if (nextRoute === 'home' && id) {
+        if (nextRoute === 'home' && window.location.hash && window.location.hash.charAt(1) !== '/') {
+          const id = window.location.hash.slice(1)
           setTimeout(() => {
-            const el = document.getElementById(id)
+            const el = id && document.getElementById(id)
             if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY, behavior: 'smooth' })
           }, 900)
         }
       }
 
-      if (transitionRef.current) transitionRef.current.run(applyRoute)
+      if (withTransition && transitionRef.current) transitionRef.current.run(applyRoute)
       else applyRoute()
     }
 
-    handleHash()
-    window.addEventListener('hashchange', handleHash)
-    return () => window.removeEventListener('hashchange', handleHash)
+    const onPopState = () => applyFromLocation({ withTransition: true })
+
+    const onClick = (e) => {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
+      const a = e.target.closest && e.target.closest('a[href]')
+      if (!a) return
+      const href = a.getAttribute('href')
+      if (!href || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http')) return
+      if (a.target && a.target !== '_self') return
+      // In-page anchors (including /#section when already on home)
+      if (href.charAt(0) === '#') return
+
+      let url
+      try {
+        url = new URL(href, window.location.origin)
+      } catch {
+        return
+      }
+      if (url.origin !== window.location.origin) return
+      if (url.pathname.startsWith('/api/')) return
+      if (url.pathname.startsWith('/hosting')) return
+      if (url.pathname.match(/\.\w+$/)) return // static files
+
+      e.preventDefault()
+      const next = `${url.pathname}${url.search}${url.hash}`
+      const current = `${window.location.pathname}${window.location.search}${window.location.hash}`
+      if (next === current) {
+        if (url.hash) {
+          const el = document.getElementById(url.hash.slice(1))
+          if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY, behavior: 'smooth' })
+        }
+        return
+      }
+      navigate(next)
+    }
+
+    applyFromLocation({ withTransition: false })
+    window.addEventListener('popstate', onPopState)
+    document.addEventListener('click', onClick)
+    return () => {
+      window.removeEventListener('popstate', onPopState)
+      document.removeEventListener('click', onClick)
+    }
   }, [])
 
   return (
     <LanguageProvider>
       <PageTransitionOverlay ref={transitionRef} />
+      <PageSeo route={route} slug={projectSlug} />
       <Nav />
       {route === 'home' ? (
         <Home showIntro={!visited} />

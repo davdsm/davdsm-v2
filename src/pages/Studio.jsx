@@ -109,7 +109,7 @@ export default function Studio() {
       const href = a.getAttribute('href')
       const id = href.slice(1)
       if (id === '/') {
-        window.location.hash = '#/'
+        window.history.pushState({}, '', '/'); window.dispatchEvent(new PopStateEvent('popstate'))
         return
       }
       const target = id ? document.getElementById(id) : document.body

@@ -2,18 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
     <meta name="theme-color" content="#357248" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="author" content="DAVDSM" />
+    <meta name="creator" content="DAVDSM" />
+    <meta name="publisher" content="DAVDSM" />
+    <meta name="format-detection" content="telephone=no" />
     <title>DAVDSM · Design &amp; code studio, Portugal</title>
     <meta
       name="description"
-      content="We grow digital gardens. A Portuguese studio of design and code, colour, form and craft, presented in full season."
+      content="We grow digital gardens. A Portuguese studio of design and code: colour, form and craft, presented in full season."
     />
+    <meta
+      name="keywords"
+      content="DAVDSM, design studio Portugal, web design, frontend development, branding, UX UI, Studio product"
+    />
+
     <link rel="canonical" href="https://davdsm.pt/" />
+    <link rel="alternate" hreflang="x-default" href="https://davdsm.pt/" />
+    <link rel="alternate" hreflang="en" href="https://davdsm.pt/" />
+    <link rel="alternate" hreflang="pt" href="https://davdsm.pt/" />
     <link rel="alternate" type="text/plain" title="llms.txt" href="https://davdsm.pt/llms.txt" />
     <link rel="alternate" type="text/plain" title="llms-full.txt" href="https://davdsm.pt/llms-full.txt" />
+    <link rel="alternate" type="text/plain" title="ai.txt" href="https://davdsm.pt/ai.txt" />
+    <link rel="author" type="text/plain" href="https://davdsm.pt/humans.txt" />
     <link rel="sitemap" type="application/xml" href="https://davdsm.pt/sitemap.xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/assets/logo-green.svg" />
 
     <!-- Open Graph / WhatsApp / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />
@@ -22,14 +41,14 @@
     <meta property="og:title" content="DAVDSM · Design &amp; code studio, Portugal" />
     <meta
       property="og:description"
-      content="We grow digital gardens. A Portuguese studio of design and code, colour, form and craft, presented in full season."
+      content="We grow digital gardens. A Portuguese studio of design and code: colour, form and craft, presented in full season."
     />
     <meta property="og:image" content="https://davdsm.pt/og-image.jpg" />
     <meta property="og:image:secure_url" content="https://davdsm.pt/og-image.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="DAVDSM studio, a studio grown, not built." />
+    <meta property="og:image:alt" content="DAVDSM studio: a studio grown, not built." />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:locale:alternate" content="pt_PT" />
 
@@ -38,25 +57,28 @@
     <meta name="twitter:title" content="DAVDSM · Design &amp; code studio, Portugal" />
     <meta
       name="twitter:description"
-      content="We grow digital gardens. A Portuguese studio of design and code, colour, form and craft, presented in full season."
+      content="We grow digital gardens. A Portuguese studio of design and code: colour, form and craft, presented in full season."
     />
     <meta name="twitter:image" content="https://davdsm.pt/og-image.jpg" />
-    <meta name="twitter:image:alt" content="DAVDSM studio, a studio grown, not built." />
+    <meta name="twitter:image:alt" content="DAVDSM studio: a studio grown, not built." />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": "Organization",
+            "@type": ["Organization", "ProfessionalService"],
             "@id": "https://davdsm.pt/#organization",
             "name": "DAVDSM",
             "url": "https://davdsm.pt/",
-            "logo": "https://davdsm.pt/assets/logo-green.svg",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://davdsm.pt/assets/logo-green.svg"
+            },
             "image": "https://davdsm.pt/og-image.jpg",
             "email": "geral@davdsm.pt",
             "foundingDate": "2019",
-            "description": "A Portuguese design and code studio. We grow digital gardens, colour, form and craft, presented in full season.",
+            "description": "A Portuguese design and code studio. We grow digital gardens: colour, form and craft, presented in full season.",
             "slogan": "We grow digital gardens.",
             "address": {
               "@type": "PostalAddress",
@@ -68,7 +90,13 @@
               "https://studio.davdsm.pt/landing",
               "https://www.instagram.com/davd.sm",
               "https://github.com/davdsm"
-            ]
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "geral@davdsm.pt",
+              "contactType": "customer service",
+              "availableLanguage": ["English", "Portuguese"]
+            }
           },
           {
             "@type": "WebSite",
@@ -90,7 +118,7 @@
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Web",
             "url": "https://studio.davdsm.pt/landing",
-            "description": "DAVDSM platform for dance studios, pilates spaces and gyms, messages, invoices and owner-to-student communication.",
+            "description": "DAVDSM platform for dance studios, pilates spaces and gyms: messages, invoices and owner-to-student communication.",
             "creator": { "@id": "https://davdsm.pt/#organization" },
             "offers": {
               "@type": "Offer",
@@ -99,6 +127,15 @@
           }
         ]
       }
+    </script>
+    <script>
+      // Legacy hash routes (#/work, #/studio, …) → real paths before the app boots.
+      (function () {
+        var hash = window.location.hash || ''
+        var match = hash.match(/^#\/(work\/[^/?#]+|studio|work|solutions|terms|privacy)\/?$/)
+        if (!match) return
+        window.location.replace('/' + match[1] + window.location.search)
+      })()
     </script>
   </head>
   <body>

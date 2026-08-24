@@ -392,7 +392,7 @@ export default function AmPrestigeCaseStudy() {
             <AmpMotionDesc className="amp-split__label amp-split__label--green"><Fade>{t(`${base}.outcome.label`)}</Fade></AmpMotionDesc>
             <AmpMotionDesc as="p" className="amp-body amp-body--dark"><Fade>{t(`${base}.outcome.text`)}</Fade></AmpMotionDesc>
           </div>
-          <a href="#/work/singula" data-reveal="" className="amp-next">
+          <a href="/work/singula" data-reveal="" className="amp-next">
             <div>
               <div className="amp-next__label"><Fade>{t(`${base}.next.label`)}</Fade></div>
               <div className="amp-next__title"><Fade>{t(`${base}.next.title`)}</Fade></div>
@@ -403,7 +403,7 @@ export default function AmPrestigeCaseStudy() {
       </article>
 
       <div className="amp-cta-bar">
-        <a href="#/work" className="work-hero-cta work-hero-cta--on-dark" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, borderRadius: 9999, borderWidth: 1, borderStyle: 'solid', padding: '9px 16px', fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, whiteSpace: 'nowrap' }}>
+        <a href="/work" className="work-hero-cta work-hero-cta--on-dark" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, borderRadius: 9999, borderWidth: 1, borderStyle: 'solid', padding: '9px 16px', fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, whiteSpace: 'nowrap' }}>
           <Fade>{t('common.backToWork')}</Fade>
         </a>
         {project?.url && (

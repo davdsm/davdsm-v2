@@ -5,7 +5,7 @@ import Fade from './Fade'
 import LiquidGlassFilter from './LiquidGlassFilter'
 
 const MENU_KEYS = ['studio', 'work', 'solutions']
-const MENU_HREFS = { studio: '#/studio', work: '#/work', solutions: '#/solutions' }
+const MENU_HREFS = { studio: '/studio', work: '/work', solutions: '/solutions' }
 
 export default function Nav() {
   const { t } = useLanguage()
@@ -49,8 +49,8 @@ export default function Nav() {
   }, [phase])
 
   const handleLogoClick = (e) => {
-    const h = window.location.hash
-    if (h === '' || h === '#' || h === '#/') {
+    const path = window.location.pathname.replace(/\/+$/, '') || '/'
+    if (path === '/') {
       e.preventDefault()
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }
@@ -70,7 +70,7 @@ export default function Nav() {
       }}
     >
       <a
-        href="#/"
+        href="/"
         onClick={handleLogoClick}
         style={{
           position: 'relative',
@@ -132,7 +132,7 @@ export default function Nav() {
         />
         <div className="dvd-nav-pill">
           <a
-            href="#/studio"
+            href="/studio"
             data-nav-link=""
             className="nav-link"
             style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, color: '#ffffff', borderRadius: 9999 }}
@@ -140,7 +140,7 @@ export default function Nav() {
             <Fade>{t('nav.studio')}</Fade>
           </a>
           <a
-            href="#/work"
+            href="/work"
             data-nav-link=""
             className="nav-link"
             style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, color: '#ffffff', borderRadius: 9999 }}
@@ -148,7 +148,7 @@ export default function Nav() {
             <Fade>{t('nav.work')}</Fade>
           </a>
           <a
-            href="#/solutions"
+            href="/solutions"
             data-nav-link=""
             className="nav-link"
             style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, color: '#ffffff', borderRadius: 9999 }}

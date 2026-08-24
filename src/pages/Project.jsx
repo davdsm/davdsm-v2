@@ -125,7 +125,7 @@ export default function Project({ slug }) {
             <p style={{ margin: '0 0 28px', fontFamily: 'var(--font-sans)', fontSize: 16, color: 'rgba(255,255,255,0.7)' }}>
               <Fade>{t('projectPage.notFound.paragraph')}</Fade>
             </p>
-            <a href="#/work" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, borderRadius: 9999, border: '1px solid var(--color-mint-300)', padding: '13px 22px', fontFamily: 'var(--font-sans)', fontSize: 14, fontWeight: 600, color: 'var(--color-mint-300)' }}>
+            <a href="/work" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, borderRadius: 9999, border: '1px solid var(--color-mint-300)', padding: '13px 22px', fontFamily: 'var(--font-sans)', fontSize: 14, fontWeight: 600, color: 'var(--color-mint-300)' }}>
               <Fade>{t('common.backToWork')}</Fade>
             </a>
           </div>
@@ -195,7 +195,7 @@ export default function Project({ slug }) {
       )}
       {restGallery.length > 0 && (
         <div className="project-cta-bar">
-          <a href="#/work" className="work-hero-cta work-hero-cta--on-dark" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, borderRadius: 9999, borderWidth: 1, borderStyle: 'solid', padding: '9px 16px', fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, whiteSpace: 'nowrap' }}>
+          <a href="/work" className="work-hero-cta work-hero-cta--on-dark" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, borderRadius: 9999, borderWidth: 1, borderStyle: 'solid', padding: '9px 16px', fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, whiteSpace: 'nowrap' }}>
             <Fade>{t('common.backToWork')}</Fade>
           </a>
           {project.url && (

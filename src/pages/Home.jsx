@@ -599,7 +599,7 @@ export default function Home({ showIntro }) {
               <span data-reveal="" style={{ fontFamily: 'var(--font-mono)', fontSize: 14, color: 'var(--color-neutral-500)', opacity: 0, transition: 'opacity 1.1s cubic-bezier(0.16,1,0.3,1) 0.2s' }}><Fade>{t('home.work.range')}</Fade></span>
             </div>
             <a
-              href="#/work"
+              href="/work"
               data-reveal=""
               className="footer-link"
               style={{ display: 'inline-flex', alignItems: 'center', gap: 10, fontFamily: 'var(--font-sans)', fontSize: 15, fontWeight: 500, color: 'rgba(255,255,255,0.72)', opacity: 0, transition: 'opacity 1.1s cubic-bezier(0.16,1,0.3,1) 0.2s, color 0.25s, transform 0.25s' }}
@@ -641,7 +641,7 @@ export default function Home({ showIntro }) {
                 return (
                   <a
                     key={item.key}
-                    href={`#/work/${item.slug}`}
+                    href={`/work/${item.slug}`}
                     data-reveal=""
                     data-cursor={t('common.view')}
                     data-plx={item.plx}

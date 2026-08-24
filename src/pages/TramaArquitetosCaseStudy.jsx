@@ -468,7 +468,7 @@ export default function TramaArquitetosCaseStudy() {
                 </div>
               ))}
             </div>
-            <a href="#/work/phfConcept" data-reveal="" className="tr-next">
+            <a href="/work/phfConcept" data-reveal="" className="tr-next">
               <div>
                 <div className="tr-next__label"><Fade>{t(`${base}.next.label`)}</Fade></div>
                 <div className="tr-next__title"><Fade>{t(`${base}.next.title`)}</Fade></div>
@@ -480,7 +480,7 @@ export default function TramaArquitetosCaseStudy() {
       </article>
 
       <div className="tr-cta-bar">
-        <a href="#/work" className="work-hero-cta work-hero-cta--on-dark" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, borderRadius: 9999, borderWidth: 1, borderStyle: 'solid', padding: '9px 16px', fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, whiteSpace: 'nowrap' }}>
+        <a href="/work" className="work-hero-cta work-hero-cta--on-dark" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, borderRadius: 9999, borderWidth: 1, borderStyle: 'solid', padding: '9px 16px', fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, whiteSpace: 'nowrap' }}>
           <Fade>{t('common.backToWork')}</Fade>
         </a>
         {project?.url && (

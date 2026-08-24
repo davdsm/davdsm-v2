@@ -1,0 +1,25 @@
+{
+  "name": "DAVDSM",
+  "short_name": "DAVDSM",
+  "description": "A Portuguese design and code studio. We grow digital gardens.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a1a0f",
+  "theme_color": "#357248",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/logo-green.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

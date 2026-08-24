@@ -1,0 +1,23 @@
+/* TEAM */
+Founder & creative director: David
+Location: Portugal
+Contact: geral@davdsm.pt
+
+/* SITE */
+Standards: HTML5, CSS3, JS (ES modules)
+Components: React, Vite
+Languages: English, Portuguese
+IDE: Cursor
+Last update: 2026-08-10
+
+/* BRAND */
+Name: DAVDSM
+Line: We grow digital gardens.
+Site: https://davdsm.pt/
+Studio product: https://studio.davdsm.pt/landing
+Instagram: https://www.instagram.com/davd.sm
+GitHub: https://github.com/davdsm
+
+/* THANKS */
+Type: Syne, Inter, Source Serif 4, Fraunces, Space Grotesk, JetBrains Mono
+Inspiration: forests, seasons, slow craft

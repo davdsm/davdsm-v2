@@ -177,6 +177,7 @@ export const translations = {
         headingEmphasis: 'seasons',
         paragraph: 'A few older projects, kept for the record.',
         projects: {
+          sekConstructions: { name: 'SEK Constructions', tag: 'website', year: '2026' },
           walkys: { name: 'Walkys', tag: 'website', year: '2026' },
           elencoCompleto: { name: 'Elenco Completo', tag: 'website', year: '2026' },
           cmvGest: { name: 'CMVGest', tag: 'website', year: '2026' },
@@ -1103,6 +1104,7 @@ export const translations = {
         headingEmphasis: 'anteriores',
         paragraph: 'Alguns projetos mais antigos, guardados para memória.',
         projects: {
+          sekConstructions: { name: 'SEK Constructions', tag: 'website', year: '2026' },
           walkys: { name: 'Walkys', tag: 'website', year: '2026' },
           elencoCompleto: { name: 'Elenco Completo', tag: 'website', year: '2026' },
           cmvGest: { name: 'CMVGest', tag: 'website', year: '2026' },

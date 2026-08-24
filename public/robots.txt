@@ -2,7 +2,7 @@
 User-agent: *
 Allow: /
 
-# AI / LLM crawlers, explicitly allowed for GEO & AI-search visibility
+# AI / LLM crawlers: explicitly allowed for GEO & AI-search visibility
 User-agent: GPTBot
 Allow: /
 
@@ -59,7 +59,10 @@ Allow: /
 
 # Crawl hints
 Sitemap: https://davdsm.pt/sitemap.xml
+Host: https://davdsm.pt
 
 # Structured briefs for AI agents & assistants (llms.txt convention)
 # https://davdsm.pt/llms.txt
 # https://davdsm.pt/llms-full.txt
+# https://davdsm.pt/ai.txt
+# https://davdsm.pt/humans.txt

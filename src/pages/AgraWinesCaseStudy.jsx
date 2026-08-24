@@ -476,7 +476,7 @@ export default function AgraWinesCaseStudy() {
               ))}
             </div>
 
-            <a href="#/work/amPrestige" className="agw-next">
+            <a href="/work/amPrestige" className="agw-next">
               <div>
                 <div className="agw-next-label"><Fade>{t(`${base}.next.label`)}</Fade></div>
                 <div className="agw-next-title"><Fade>{t(`${base}.next.title`)}</Fade></div>
@@ -488,7 +488,7 @@ export default function AgraWinesCaseStudy() {
       </div>
 
       <div className="agw-cta-bar">
-        <a href="#/work" className="work-hero-cta work-hero-cta--on-dark" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, borderRadius: 9999, borderWidth: 1, borderStyle: 'solid', padding: '9px 16px', fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, whiteSpace: 'nowrap' }}>
+        <a href="/work" className="work-hero-cta work-hero-cta--on-dark" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, borderRadius: 9999, borderWidth: 1, borderStyle: 'solid', padding: '9px 16px', fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, whiteSpace: 'nowrap' }}>
           <Fade>{t('common.backToWork')}</Fade>
         </a>
         {project?.url && (

@@ -497,7 +497,7 @@ export default function PhfConceptCaseStudy() {
           <div className="phf-inner" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 24 }}>
             <p data-reveal="" className="phf-closing-quote"><Fade>{t(`${base}.closing.quote`)}</Fade></p>
             <span data-reveal="" className="phf-closing-credit">{t(`${base}.closing.credit`)}</span>
-            <a href="#/work/amPrestige" data-reveal="" className="phf-next" style={{ width: '100%', maxWidth: 640 }}>
+            <a href="/work/amPrestige" data-reveal="" className="phf-next" style={{ width: '100%', maxWidth: 640 }}>
               <div>
                 <div className="phf-next__label"><Fade>{t(`${base}.next.label`)}</Fade></div>
                 <div className="phf-next__title"><Fade>{t(`${base}.next.title`)}</Fade></div>
@@ -509,7 +509,7 @@ export default function PhfConceptCaseStudy() {
       </article>
 
       <div className="phf-cta-bar">
-        <a href="#/work" className="work-hero-cta work-hero-cta--on-dark" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, borderRadius: 9999, borderWidth: 1, borderStyle: 'solid', padding: '9px 16px', fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, whiteSpace: 'nowrap' }}>
+        <a href="/work" className="work-hero-cta work-hero-cta--on-dark" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, borderRadius: 9999, borderWidth: 1, borderStyle: 'solid', padding: '9px 16px', fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, whiteSpace: 'nowrap' }}>
           <Fade>{t('common.backToWork')}</Fade>
         </a>
         {project?.url && (
