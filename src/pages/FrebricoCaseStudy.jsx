@@ -21,7 +21,7 @@ export default function FrebricoCaseStudy() {
     if (!root) return undefined
 
     const study = root.querySelector('#fb-root')
-    if (study) study.classList.add('js-ready')
+    const fxNodes = Array.from(root.querySelectorAll('.fx'))
 
     const navLogoWhite = document.querySelector('[data-nav-logo-white]')
     const navLogoGreen = document.querySelector('[data-nav-logo-green]')
@@ -54,7 +54,22 @@ export default function FrebricoCaseStudy() {
     window.addEventListener('resize', updateNavTheme, { passive: true })
 
     const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
-    if (reduceMotion && study) study.classList.add('no-motion')
+    if (reduceMotion) {
+      if (study) study.classList.add('no-motion')
+      fxNodes.forEach((el) => el.classList.add('in'))
+      return () => {
+        window.removeEventListener('scroll', updateNavTheme)
+        window.removeEventListener('resize', updateNavTheme)
+      }
+    }
+
+    const revealInView = () => {
+      const vh = window.innerHeight
+      fxNodes.forEach((el) => {
+        const r = el.getBoundingClientRect()
+        if (r.top < vh * 0.95 && r.bottom > 0) el.classList.add('in')
+      })
+    }
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -65,13 +80,22 @@ export default function FrebricoCaseStudy() {
           }
         })
       },
-      { threshold: 0.12, rootMargin: '0px 0px -8% 0px' },
+      { threshold: 0.08, rootMargin: '0px 0px -4% 0px' },
     )
-    root.querySelectorAll('.fx').forEach((el) => io.observe(el))
+    fxNodes.forEach((el) => io.observe(el))
+    // Mark near-viewport nodes before enabling hidden state.
+    revealInView()
+    if (study) study.classList.add('js-ready')
+
+    // Hard safety: never leave later sections stuck invisible.
+    const safety = window.setTimeout(() => {
+      fxNodes.forEach((el) => el.classList.add('in'))
+    }, 1600)
 
     return () => {
       window.removeEventListener('scroll', updateNavTheme)
       window.removeEventListener('resize', updateNavTheme)
+      window.clearTimeout(safety)
       io.disconnect()
     }
   }, [])
