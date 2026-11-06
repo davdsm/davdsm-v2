@@ -3,6 +3,7 @@
  * Ordered newest → oldest. Excludes Featured / Freshly planted.
  */
 export const ARCHIVE_PROJECTS = [
+  { key: 'phfConcept', url: 'https://phfconcept.com/', year: '2026' },
   { key: 'sekConstructions', url: 'https://www.sek-construction.com/', year: '2026' },
   { key: 'walkys', url: 'https://walkys.com/', year: '2026' },
   { key: 'elencoCompleto', url: 'https://www.elencocompleto.pt/', year: '2026' },

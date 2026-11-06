@@ -5,6 +5,7 @@ import AmPrestigeCaseStudy from './AmPrestigeCaseStudy'
 import AgraWinesCaseStudy from './AgraWinesCaseStudy'
 import ForezguimaCaseStudy from './ForezguimaCaseStudy'
 import PhfConceptCaseStudy from './PhfConceptCaseStudy'
+import FrebricoCaseStudy from './FrebricoCaseStudy'
 import TramaArquitetosCaseStudy from './TramaArquitetosCaseStudy'
 import ImperoVictoriaCaseStudy from './ImperoVictoriaCaseStudy'
 import { useLanguage } from '../i18n/LanguageContext'
@@ -18,7 +19,7 @@ export default function Project({ slug }) {
   const destroyedRef = useRef(false)
 
   useEffect(() => {
-    if (slug === 'amPrestige' || slug === 'agraWines' || slug === 'forezguima' || slug === 'phfConcept' || slug === 'tramaArquitetos' || slug === 'imperoVictoria') return undefined
+    if (slug === 'amPrestige' || slug === 'agraWines' || slug === 'forezguima' || slug === 'phfConcept' || slug === 'frebrico' || slug === 'tramaArquitetos' || slug === 'imperoVictoria') return undefined
 
     destroyedRef.current = false
     const root = rootRef.current
@@ -104,6 +105,10 @@ export default function Project({ slug }) {
 
   if (slug === 'phfConcept') {
     return <PhfConceptCaseStudy />
+  }
+
+  if (slug === 'frebrico') {
+    return <FrebricoCaseStudy />
   }
 
   if (slug === 'tramaArquitetos') {

@@ -160,6 +160,7 @@ export const translations = {
         projects: {
           tramaArquitetos: { name: 'Trama Arquitetos', tag: 'website · architecture · UX', year: '2024' },
           imperoVictoria: { name: 'Impero Victoria', tag: 'website · fashion · UX', year: '2022' },
+          frebrico: { name: 'Frebrico', tag: 'website · catalogue · e-commerce', year: '2026' },
           phfConcept: { name: 'PHF Concept', tag: 'design · front-end · backoffice', year: '2026' },
           forezguima: { name: 'Forezguima', tag: 'website · catalogue · UX', year: '2026' },
           amPrestige: { name: 'AM Prestige', tag: 'identity · website · CMS', year: '2026' },
@@ -177,6 +178,7 @@ export const translations = {
         headingEmphasis: 'seasons',
         paragraph: 'A few older projects, kept for the record.',
         projects: {
+          phfConcept: { name: 'PHF Concept', tag: 'website · catalogue', year: '2026' },
           sekConstructions: { name: 'SEK Constructions', tag: 'website', year: '2026' },
           walkys: { name: 'Walkys', tag: 'website', year: '2026' },
           elencoCompleto: { name: 'Elenco Completo', tag: 'website', year: '2026' },
@@ -384,7 +386,7 @@ export const translations = {
               accent: { value: '01', label: 'Accent colour' },
             },
           },
-          next: { label: 'Next project', title: 'PHF Concept' },
+          next: { label: 'Next project', title: 'Frebrico' },
         },
       },
       tramaArquitetos: {
@@ -497,7 +499,7 @@ export const translations = {
               languages: { value: '2', label: 'Languages' },
             },
           },
-          next: { label: 'Next project', title: 'PHF Concept' },
+          next: { label: 'Next project', title: 'Frebrico' },
         },
       },
       singula: {
@@ -1087,6 +1089,7 @@ export const translations = {
         projects: {
           tramaArquitetos: { name: 'Trama Arquitetos', tag: 'website · arquitetura · UX', year: '2024' },
           imperoVictoria: { name: 'Impero Victoria', tag: 'website · fashion · UX', year: '2022' },
+          frebrico: { name: 'Frebrico', tag: 'website · catálogo · e-commerce', year: '2026' },
           phfConcept: { name: 'PHF Concept', tag: 'design · front-end · backoffice', year: '2026' },
           forezguima: { name: 'Forezguima', tag: 'website · catálogo · UX', year: '2026' },
           amPrestige: { name: 'AM Prestige', tag: 'identidade · website · CMS', year: '2026' },
@@ -1104,6 +1107,7 @@ export const translations = {
         headingEmphasis: 'anteriores',
         paragraph: 'Alguns projetos mais antigos, guardados para memória.',
         projects: {
+          phfConcept: { name: 'PHF Concept', tag: 'website · catálogo', year: '2026' },
           sekConstructions: { name: 'SEK Constructions', tag: 'website', year: '2026' },
           walkys: { name: 'Walkys', tag: 'website', year: '2026' },
           elencoCompleto: { name: 'Elenco Completo', tag: 'website', year: '2026' },
@@ -1311,7 +1315,7 @@ export const translations = {
               accent: { value: '01', label: 'Cor de acento' },
             },
           },
-          next: { label: 'Próximo projeto', title: 'PHF Concept' },
+          next: { label: 'Próximo projeto', title: 'Frebrico' },
         },
       },
       tramaArquitetos: {
@@ -1424,7 +1428,7 @@ export const translations = {
               languages: { value: '2', label: 'Idiomas' },
             },
           },
-          next: { label: 'Próximo projeto', title: 'PHF Concept' },
+          next: { label: 'Próximo projeto', title: 'Frebrico' },
         },
       },
       singula: {

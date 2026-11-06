@@ -25,7 +25,7 @@ const BLOOM_PETALS = [
 ]
 
 function getRecent(t) {
-  return ['phfConcept', 'amPrestige', 'agraWines', 'singula', 'tramaArquitetos', 'imperoVictoria'].map((key) => ({
+  return ['frebrico', 'amPrestige', 'agraWines', 'singula', 'tramaArquitetos', 'imperoVictoria'].map((key) => ({
     key,
     name: t(`workPage.recent.projects.${key}.name`),
     tag: t(`workPage.recent.projects.${key}.tag`),

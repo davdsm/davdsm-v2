@@ -106,6 +106,7 @@ function projectMeta(slug, lang) {
   // Titles/descriptions are mirrored lightly; full copy lives in translations.
   const names = {
     forezguima: 'Forezguima',
+    frebrico: 'Frebrico',
     phfConcept: 'PHF Concept',
     amPrestige: 'AM Prestige',
     agraWines: 'AgraWines',
@@ -116,6 +117,7 @@ function projectMeta(slug, lang) {
   const blurbs = {
     en: {
       forezguima: 'Precision cutting tools catalogue: UX, frontend and motion for FOREZIENNE’s national representative in Portugal.',
+      frebrico: 'Catalogue e-commerce for nets, wire and fencing — live pricing, search and one-page checkout, by DAVDSM.',
       phfConcept: 'Industrial ventilation website and multilingual backoffice by DAVDSM.',
       amPrestige: 'Classic car collection identity, website and CMS by DAVDSM.',
       agraWines: 'Organic-wine e-commerce experience designed and coded by DAVDSM.',
@@ -125,6 +127,7 @@ function projectMeta(slug, lang) {
     },
     pt: {
       forezguima: 'Catálogo de ferramentas de corte de precisão: UX, frontend e motion para o representante nacional da FOREZIENNE em Portugal.',
+      frebrico: 'E-commerce de catálogo para redes, arames e vedações — preços ao vivo, pesquisa e checkout numa página, pela DAVDSM.',
       phfConcept: 'Website de ventilação industrial e backoffice multilingue pela DAVDSM.',
       amPrestige: 'Identidade, website e CMS para uma coleção de clássicos, pela DAVDSM.',
       agraWines: 'Experiência de e-commerce de vinhos biológicos, design e código pela DAVDSM.',

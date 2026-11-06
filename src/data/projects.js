@@ -40,6 +40,21 @@ export const PROJECTS = {
       '/assets/work/trama-arquitetos/shots/mobile-galeria.png',
     ],
   },
+  frebrico: {
+    slug: 'frebrico',
+    cover: '/assets/work/frebrico/00-cover.png',
+    hoverCover: '/assets/work/frebrico/00-hover.png',
+    url: 'https://www.frebrico.pt/',
+    gallery: [
+      '/assets/work/frebrico/shots/desktop-1.png',
+      '/assets/work/frebrico/shots/desktop-2.png',
+      '/assets/work/frebrico/shots/desktop-3.png',
+      '/assets/work/frebrico/shots/desktop-4.png',
+      '/assets/work/frebrico/shots/mobile-1.png',
+      '/assets/work/frebrico/shots/mobile-2.png',
+      '/assets/work/frebrico/shots/mobile-3.png',
+    ],
+  },
   phfConcept: {
     slug: 'phfConcept',
     cover: '/assets/work/phf-concept/00-cover.png',

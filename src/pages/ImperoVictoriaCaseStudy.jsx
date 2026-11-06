@@ -428,7 +428,7 @@ export default function ImperoVictoriaCaseStudy() {
                 </div>
               ))}
             </div>
-            <a href="/work/phfConcept" data-reveal="" className="iv-next">
+            <a href="/work/frebrico" data-reveal="" className="iv-next">
               <div>
                 <div className="iv-next__label"><Fade>{t(`${base}.next.label`)}</Fade></div>
                 <div className="iv-next__title"><Fade>{t(`${base}.next.title`)}</Fade></div>

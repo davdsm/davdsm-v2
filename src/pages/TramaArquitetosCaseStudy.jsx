@@ -468,7 +468,7 @@ export default function TramaArquitetosCaseStudy() {
                 </div>
               ))}
             </div>
-            <a href="/work/phfConcept" data-reveal="" className="tr-next">
+            <a href="/work/frebrico" data-reveal="" className="tr-next">
               <div>
                 <div className="tr-next__label"><Fade>{t(`${base}.next.label`)}</Fade></div>
                 <div className="tr-next__title"><Fade>{t(`${base}.next.title`)}</Fade></div>
