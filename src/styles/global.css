@@ -469,3 +469,28 @@ a:hover {
     animation: none;
   }
 }
+
+
+/* Case study mobile text safety */
+@media (max-width: 720px) {
+  .phf-page,
+  .fg-page,
+  .tr-page,
+  .iv-page,
+  .amp-page,
+  .agw-page,
+  .fb-page {
+    overflow-x: clip;
+  }
+  .phf-page h1, .phf-page h2, .phf-page h3, .phf-page p,
+  .fg-page h1, .fg-page h2, .fg-page h3, .fg-page p,
+  .tr-page h1, .tr-page h2, .tr-page h3, .tr-page p,
+  .iv-page h1, .iv-page h2, .iv-page h3, .iv-page p,
+  .amp-page h1, .amp-page h2, .amp-page h3, .amp-page p,
+  .agw-page h1, .agw-page h2, .agw-page h3, .agw-page p,
+  .fb-page h1, .fb-page h2, .fb-page h3, .fb-page p {
+    overflow-wrap: anywhere;
+    word-break: normal;
+    max-width: 100%;
+  }
+}
