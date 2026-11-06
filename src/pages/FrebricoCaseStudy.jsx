@@ -3,23 +3,25 @@ import Fade from '../components/Fade'
 import Footer from '../components/Footer'
 import { useLanguage } from '../i18n/LanguageContext'
 import { PROJECTS } from '../data/projects'
+import { FREBRICO_CASE_HTML } from '../data/frebricoCaseHtml'
 import '../styles/work.css'
-import '../styles/project.css'
+import '../styles/frebrico-case-study.css'
 
 /**
- * Frebrico case study — same chrome as every other project page
- * (site Nav from App, fixed CTA bar, Footer), with the exported study
- * embedded in-flow so the page scrolls as one document.
+ * Frebrico case study — native page (no iframe) so Nav, Footer and CTA
+ * behave exactly like every other project page, without scroll blow-ups.
  */
 export default function FrebricoCaseStudy() {
   const { t } = useLanguage()
   const project = PROJECTS.frebrico
   const rootRef = useRef(null)
-  const iframeRef = useRef(null)
 
   useEffect(() => {
     const root = rootRef.current
     if (!root) return undefined
+
+    const study = root.querySelector('#fb-root')
+    if (study) study.classList.add('js-ready')
 
     const navLogoWhite = document.querySelector('[data-nav-logo-white]')
     const navLogoGreen = document.querySelector('[data-nav-logo-green]')
@@ -51,74 +53,37 @@ export default function FrebricoCaseStudy() {
     window.addEventListener('scroll', updateNavTheme, { passive: true })
     window.addEventListener('resize', updateNavTheme, { passive: true })
 
-    const iframe = iframeRef.current
-    let ro
-    let timers = []
+    const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+    if (reduceMotion && study) study.classList.add('no-motion')
 
-    const resizeIframe = () => {
-      if (!iframe) return
-      try {
-        const doc = iframe.contentDocument
-        if (!doc?.body) return
-        const height = Math.max(
-          doc.body.scrollHeight,
-          doc.documentElement?.scrollHeight || 0,
-          doc.body.offsetHeight,
-        )
-        if (height > 0) iframe.style.height = `${height}px`
-      } catch {
-        /* ignore */
-      }
-    }
-
-    const onLoad = () => {
-      resizeIframe()
-      try {
-        const doc = iframe.contentDocument
-        if (doc?.body && typeof ResizeObserver !== 'undefined') {
-          ro = new ResizeObserver(resizeIframe)
-          ro.observe(doc.body)
-          if (doc.documentElement) ro.observe(doc.documentElement)
-        }
-      } catch {
-        /* ignore */
-      }
-      timers = [400, 1200, 2500, 5000, 8000].map((ms) => setTimeout(resizeIframe, ms))
-    }
-
-    if (iframe) {
-      iframe.addEventListener('load', onLoad)
-      if (iframe.contentDocument?.readyState === 'complete') onLoad()
-    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('in')
+            io.unobserve(e.target)
+          }
+        })
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -8% 0px' },
+    )
+    root.querySelectorAll('.fx').forEach((el) => io.observe(el))
 
     return () => {
       window.removeEventListener('scroll', updateNavTheme)
       window.removeEventListener('resize', updateNavTheme)
-      if (iframe) iframe.removeEventListener('load', onLoad)
-      if (ro) ro.disconnect()
-      timers.forEach(clearTimeout)
+      io.disconnect()
     }
   }, [])
 
   return (
     <div ref={rootRef}>
-      <section data-nav-theme="dark" style={{ position: 'relative', background: '#2e3a2b' }}>
-        <iframe
-          ref={iframeRef}
-          title="Frebrico case study"
-          src="/assets/work/frebrico/case-study.html"
-          style={{
-            display: 'block',
-            width: '100%',
-            minHeight: '100vh',
-            height: '100vh',
-            border: 'none',
-            background: '#2e3a2b',
-          }}
-        />
-      </section>
+      <article
+        id="fb-root"
+        dangerouslySetInnerHTML={{ __html: FREBRICO_CASE_HTML }}
+      />
 
-      <div className="project-cta-bar">
+      <div className="fb-cta-bar">
         <a
           href="/work"
           className="work-hero-cta work-hero-cta--on-dark"
