@@ -73,12 +73,12 @@
 .fb-index,
 .fb-kicker,
 .fb-eyebrow {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: #56664f;
-  margin-bottom: 22px;
+  margin-bottom: 30px;
 }
 .fb-eyebrow--onDark,
 .fb-about-band .fb-eyebrow { color: #cfd8c9; }
