@@ -489,8 +489,10 @@ a:hover {
   .amp-page h1, .amp-page h2, .amp-page h3, .amp-page p,
   .agw-page h1, .agw-page h2, .agw-page h3, .agw-page p,
   .fb-page h1, .fb-page h2, .fb-page h3, .fb-page p {
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     word-break: normal;
+    hyphens: none;
+    -webkit-hyphens: none;
     max-width: 100%;
   }
 }

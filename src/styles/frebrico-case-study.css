@@ -14,8 +14,10 @@
   color: #141414;
   font-family: 'Outfit', var(--font-sans), sans-serif;
   word-break: normal;
-  overflow-wrap: anywhere;
-  hyphens: auto;
+  overflow-wrap: break-word;
+  hyphens: none;
+  -webkit-hyphens: none;
+  padding-bottom: 88px;
 }
 
 .fb-page img {
@@ -543,9 +545,16 @@
   .fb-h2,
   .fb-h2--onDark,
   .fb-h2--outcome,
+  .fb-h3,
   .fb-hero__title {
     max-width: none;
     width: 100%;
+    font-size: clamp(22px, 6.2vw, 28px);
+    line-height: 1.2;
+    hyphens: none;
+    -webkit-hyphens: none;
+    overflow-wrap: normal;
+    word-break: normal;
   }
   .fb-body,
   .fb-body--sm,
@@ -554,6 +563,9 @@
   .fb-approach-lead,
   .fb-mobile-lead {
     max-width: none;
+    hyphens: none;
+    -webkit-hyphens: none;
+    overflow-wrap: break-word;
   }
   .fb-meta { gap: 18px 28px; }
   .fb-kit { border-radius: 20px; padding: 24px 16px; }

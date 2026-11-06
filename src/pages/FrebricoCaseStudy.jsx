@@ -83,20 +83,25 @@ export default function FrebricoCaseStudy() {
     const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
     if (reduceMotion) root.classList.add('no-motion')
 
+    const reveal = (el) => {
+      el.classList.add('in')
+      el.style.opacity = '1'
+      el.style.transform = 'none'
+    }
     const nodes = Array.from(root.querySelectorAll('[data-reveal]'))
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            e.target.classList.add('in')
+            reveal(e.target)
             io.unobserve(e.target)
           }
         })
       },
-      { threshold: 0.1, rootMargin: '0px 0px -6% 0px' },
+      { threshold: 0.08, rootMargin: '0px 0px -4% 0px' },
     )
     nodes.forEach((el) => {
-      if (reduceMotion) el.classList.add('in')
+      if (reduceMotion) reveal(el)
       else io.observe(el)
     })
 

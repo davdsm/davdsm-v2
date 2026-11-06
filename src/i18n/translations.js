@@ -514,7 +514,7 @@ export const translations = {
         tag: 'website · catalogue · e-commerce',
         year: '2026',
         hero: { line1: 'Fencing,', line2Pre: 'built for the ', emphasis: 'click.' },
-        summary: 'A calm white catalogue for nets, wire, posts and fencing — live pricing, search and one-page checkout for a family hardware store.',
+        summary: 'A calm white catalogue for nets, wire, posts and fencing, with live pricing, search and one-page checkout for a family hardware store.',
         caseStudy: {
           eyebrow: 'Case study',
           title: 'Fencing built to last, now built to click.',
@@ -537,20 +537,20 @@ export const translations = {
             kitProduct: 'Welded mesh',
           },
           challenge: {
-            index: '01 — The challenge',
+            index: '01 · The challenge',
             title: 'A thousand products, none of them glamorous.',
-            text: 'Rolls of wire, pine posts, mesh panels — sold by the metre, by diameter, by finish. The old shop read like a price list. The new one had to make technical products feel trustworthy and easy to buy, while handling variants, shipping rules for goods over two metres and a free-shipping threshold at 185 €.',
+            text: 'Rolls of wire, pine posts, mesh panels, sold by the metre, by diameter, by finish. The old shop read like a price list. The new one had to make technical products feel trustworthy and easy to buy, while handling variants, shipping rules for goods over two metres and a free-shipping threshold at 185 €.',
             alt: 'Frebrico homepage on desktop',
           },
           approach: {
-            index: '02 — The approach',
+            index: '02 · The approach',
             titleLine1: 'White shelves,',
             titleLine2: 'one deep green.',
-            text: 'Products sit on soft grey rounded tiles, the way they’d sit on a clean shelf. Outfit carries every word, from the oversized hero to the uppercase product names. A single dark forest green marks every action — Contacts, Sign in, Apply — and nothing else competes with it.',
-            kitLabel: 'The kit — live components',
+            text: 'Products sit on soft grey rounded tiles, the way they’d sit on a clean shelf. Outfit carries every word, from the oversized hero to the uppercase product names. A single dark forest green marks every action (Contacts, Sign in, Apply) and nothing else competes with it.',
+            kitLabel: 'The kit · live components',
           },
           screens: {
-            index: '03 — The screens',
+            index: '03 · The screens',
             catalogue: {
               kicker: 'Catalogue',
               title: 'Every product on its own shelf',
@@ -560,7 +560,7 @@ export const translations = {
             checkout: {
               kicker: 'Checkout',
               title: 'One page, no surprises',
-              text: 'Contact, shipping address and order summary live side by side. Shipping is calculated live — with VAT shown inline — so the total never changes after the customer commits.',
+              text: 'Contact, shipping address and order summary live side by side. Shipping is calculated live, with VAT shown inline, so the total never changes after the customer commits.',
               alt: 'Frebrico checkout',
             },
             about: {
@@ -572,7 +572,7 @@ export const translations = {
             },
           },
           mobile: {
-            index: '04 — On the phone',
+            index: '04 · On the phone',
             titleLine1: 'Search first,',
             titleLine2: 'scroll second.',
             text: 'Most buyers know the product by name. Instant search returns products and categories as you type, with keyboard shortcuts on desktop and a full-width sheet on mobile.',
@@ -583,9 +583,9 @@ export const translations = {
             },
           },
           outcome: {
-            index: '05 — The outcome',
+            index: '05 · The outcome',
             title: 'A hardware store that feels as solid as what it sells.',
-            text: 'A full catalogue, live pricing and shipping, instant search and a custom backoffice for products, orders and content — on a white canvas with a single green accent.',
+            text: 'A full catalogue, live pricing and shipping, instant search and a custom backoffice for products, orders and content, on a white canvas with a single green accent.',
             stats: {
               founded: { value: '2004', label: 'Founded' },
               checkout: { value: '1', label: 'Page checkout' },
@@ -1528,7 +1528,7 @@ export const translations = {
         tag: 'website · catálogo · e-commerce',
         year: '2026',
         hero: { line1: 'Vedações,', line2Pre: 'feitas para o ', emphasis: 'clique.' },
-        summary: 'Um catálogo branco e calmo para redes, arames, postes e vedações — preços ao vivo, pesquisa e checkout numa página para uma loja familiar de ferragens.',
+        summary: 'Um catálogo branco e calmo para redes, arames, postes e vedações, com preços ao vivo, pesquisa e checkout numa página para uma loja familiar de ferragens.',
         caseStudy: {
           eyebrow: 'Estudo de caso',
           title: 'Vedações à prova do tempo, agora à prova de clique.',
@@ -1551,20 +1551,20 @@ export const translations = {
             kitProduct: 'Rede soldada',
           },
           challenge: {
-            index: '01 — O desafio',
+            index: '01 · O desafio',
             title: 'Mil produtos, nenhum glamouroso.',
-            text: 'Rolinhos de arame, postes de pinho, painéis de rede — vendidos ao metro, ao diâmetro, ao acabamento. A loja antiga lia-se como uma lista de preços. A nova tinha de tornar produtos técnicos fiáveis e fáceis de comprar, com variantes, regras de envio para peças com mais de dois metros e portes grátis a partir de 185 €.',
+            text: 'Rolinhos de arame, postes de pinho, painéis de rede, vendidos ao metro, ao diâmetro, ao acabamento. A loja antiga lia-se como uma lista de preços. A nova tinha de tornar produtos técnicos fiáveis e fáceis de comprar, com variantes, regras de envio para peças com mais de dois metros e portes grátis a partir de 185 €.',
             alt: 'Página inicial Frebrico em desktop',
           },
           approach: {
-            index: '02 — A abordagem',
+            index: '02 · A abordagem',
             titleLine1: 'Prateleiras brancas,',
             titleLine2: 'um verde profundo.',
-            text: 'Os produtos assentam em mosaicos cinza-suave arredondados, como numa prateleira limpa. A tipografia Outfit carrega cada palavra, do herói oversized aos nomes em maiúsculas. Um único verde floresta marca cada ação — Contactos, Entrar, Aplicar — e nada mais compete com ele.',
-            kitLabel: 'O kit — componentes ao vivo',
+            text: 'Os produtos assentam em mosaicos cinza-suave arredondados, como numa prateleira limpa. A tipografia Outfit carrega cada palavra, do herói oversized aos nomes em maiúsculas. Um único verde floresta marca cada ação (Contactos, Entrar, Aplicar) e nada mais compete com ele.',
+            kitLabel: 'O kit · componentes ao vivo',
           },
           screens: {
-            index: '03 — Os ecrãs',
+            index: '03 · Os ecrãs',
             catalogue: {
               kicker: 'Catálogo',
               title: 'Cada produto na sua prateleira',
@@ -1574,7 +1574,7 @@ export const translations = {
             checkout: {
               kicker: 'Checkout',
               title: 'Uma página, sem surpresas',
-              text: 'Contacto, morada de envio e resumo da encomenda lado a lado. Os portes calculam-se ao vivo — com IVA à vista — para o total nunca mudar depois do compromisso do cliente.',
+              text: 'Contacto, morada de envio e resumo da encomenda lado a lado. Os portes calculam-se ao vivo, com IVA à vista, para o total nunca mudar depois do compromisso do cliente.',
               alt: 'Checkout Frebrico',
             },
             about: {
@@ -1586,7 +1586,7 @@ export const translations = {
             },
           },
           mobile: {
-            index: '04 — No telemóvel',
+            index: '04 · No telemóvel',
             titleLine1: 'Pesquisar primeiro,',
             titleLine2: 'deslizar depois.',
             text: 'A maior parte dos compradores conhece o produto pelo nome. A pesquisa instantânea devolve produtos e categorias enquanto se escreve, com atalhos de teclado no desktop e uma folha em largura total no telemóvel.',
@@ -1597,9 +1597,9 @@ export const translations = {
             },
           },
           outcome: {
-            index: '05 — O resultado',
+            index: '05 · O resultado',
             title: 'Uma loja de ferragens tão sólida como o que vende.',
-            text: 'Catálogo completo, preços e portes ao vivo, pesquisa instantânea e um backoffice à medida para produtos, encomendas e conteúdos — num canvas branco com um único acento verde.',
+            text: 'Catálogo completo, preços e portes ao vivo, pesquisa instantânea e um backoffice à medida para produtos, encomendas e conteúdos, num canvas branco com um único acento verde.',
             stats: {
               founded: { value: '2004', label: 'Fundada' },
               checkout: { value: '1', label: 'Checkout numa página' },
